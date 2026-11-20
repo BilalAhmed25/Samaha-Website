@@ -71,6 +71,16 @@ export default function HomeHeroSection({ onOpenConsultation }) {
 
     const activeDiv = divisions[currentSlide];
 
+    const branchFlags = [
+        { id: 'united-arab-emirates', name: 'United Arab Emirates (HQ)', src: '/flags/ae.png' },
+        { id: 'egypt', name: 'Egypt', src: '/flags/eg.png' },
+        { id: 'kingdom-of-saudi-arabia', name: 'Kingdom of Saudi Arabia', src: '/flags/sa.png' },
+        { id: 'hashemite-kingdom-of-jordan-branches', name: 'Jordan', src: '/flags/jo.png' },
+        { id: 'qatar-branches', name: 'Qatar', src: '/flags/qa.png' },
+        { id: 'oman-branches', name: 'Oman', src: '/flags/om.png' },
+        { id: 'united-kingdom', name: 'United Kingdom', src: '/flags/gb.png' }
+    ];
+
     return (
         <section
             className="hero-slider-section"
@@ -151,6 +161,25 @@ export default function HomeHeroSection({ onOpenConsultation }) {
                                 className={`slider-indicator-bar ${dotIdx === currentSlide ? 'active' : ''}`}
                                 aria-label={`Jump to slide ${dotIdx + 1}`}
                             />
+                        ))}
+                    </div>
+
+                    {/* All Branch Flags Only */}
+                    <div className="pt-3 border-t border-white/10 flex items-center gap-2 sm:gap-2.5 flex-wrap">
+                        {branchFlags.map((flag) => (
+                            <Link
+                                key={flag.id}
+                                to={`/branches#${flag.id}`}
+                                title={flag.name}
+                                aria-label={flag.name}
+                                className="group inline-block"
+                            >
+                                <img
+                                    src={flag.src}
+                                    alt={flag.name}
+                                    className="w-7 h-5 sm:w-8 sm:h-5.5 object-cover rounded-[2px] border border-white/25 group-hover:border-gold-400 group-hover:scale-110 transition-all cursor-pointer"
+                                />
+                            </Link>
                         ))}
                     </div>
 

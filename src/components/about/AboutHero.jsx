@@ -6,9 +6,6 @@ export default function AboutHero() {
         <section className="about-hero-wrapper">
             <div className="about-hero-glow"></div>
             <div className="site-container relative space-y-4">
-                <span className="text-xs font-semibold uppercase tracking-widest text-gold-400 block">
-                    About Samaha Group
-                </span>
                 <h1 className="text-4xl sm:text-5xl font-serif font-extrabold text-white">
                     30 Years of Legal Leadership & Precision
                 </h1>
