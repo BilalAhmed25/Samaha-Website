@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { ChevronDown, Phone, ShieldCheck } from 'lucide-react';
+import { ChevronDown, HelpCircle, ShieldCheck } from 'lucide-react';
 import { FaWhatsapp } from 'react-icons/fa';
 import { firmInfo } from '../../data/siteData';
 import './HomeFaqSection.css';
@@ -33,12 +33,15 @@ export default function HomeFaqSection({ onOpenConsultation }) {
           {/* FAQ Accordion */}
           <div className="lg:col-span-7 space-y-6">
             <div>
-              <span className="text-sm font-bold uppercase tracking-widest text-gold-600 block mb-1">
-                Clear Answers
-              </span>
-              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-serif font-bold text-[#233368]">
+              <span className="text-xs font-bold uppercase tracking-widest text-gold-600 block mb-2">
                 Frequently Asked Questions
+              </span>
+              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-serif font-bold text-[#121B38] mb-3">
+                Clear & Direct Answers
               </h2>
+              <p className="text-slate-600 text-sm sm:text-base leading-relaxed">
+                Have questions? Here are clear and direct answers to our most common client inquiries.
+              </p>
             </div>
 
             <div className="space-y-3.5">
@@ -49,10 +52,15 @@ export default function HomeFaqSection({ onOpenConsultation }) {
                     <button
                       type="button"
                       onClick={() => setActiveFaq(isOpen ? -1 : idx)}
-                      className="w-full px-5 py-4 text-left flex items-center justify-between gap-4 font-semibold text-[#233368] hover:text-gold-600 cursor-pointer transition-colors"
+                      className="w-full px-5 py-4 text-left flex items-center justify-between gap-4 cursor-pointer transition-colors"
                       aria-expanded={isOpen}
                     >
-                      <span className="text-base sm:text-lg">{faq.question}</span>
+                      <div className="flex items-center gap-3">
+                        <HelpCircle className="w-5 h-5 text-gold-600 shrink-0" />
+                        <span className="text-base sm:text-lg font-serif font-bold text-[#121B38] text-left">
+                          {faq.question}
+                        </span>
+                      </div>
                       <ChevronDown 
                         className={`w-5 h-5 shrink-0 faq-chevron ${isOpen ? 'open' : ''}`} 
                       />
@@ -62,7 +70,9 @@ export default function HomeFaqSection({ onOpenConsultation }) {
                     <div className={`faq-answer-collapse ${isOpen ? 'open' : ''}`}>
                       <div className="faq-answer-inner text-sm sm:text-base text-slate-600 leading-relaxed">
                         <div className="pt-2 border-t border-slate-200/60">
-                          {faq.answer}
+                          <p className="text-slate-600 text-sm sm:text-base leading-relaxed">
+                            {faq.answer}
+                          </p>
                         </div>
                       </div>
                     </div>
@@ -75,7 +85,7 @@ export default function HomeFaqSection({ onOpenConsultation }) {
           {/* Side Card: Book a Free Consultation With Us */}
           <div className="lg:col-span-5">
             <div className="faq-booking-box space-y-5">
-              <span className="text-sm font-bold uppercase tracking-wider text-gold-400 block">
+              <span className="text-xs font-bold uppercase tracking-widest text-gold-400 block">
                 Direct Appointment
               </span>
 
@@ -90,7 +100,7 @@ export default function HomeFaqSection({ onOpenConsultation }) {
               <div className="flex items-center gap-3 pt-2">
                 <button
                   onClick={onOpenConsultation}
-                  className="flex-1 btn-gold text-sm !py-2.5 !px-4 text-center justify-center font-semibold"
+                  className="flex-1 btn-gold text-xs sm:text-sm !py-2.5 !px-4 text-center justify-center font-semibold"
                 >
                   Schedule Consultation
                 </button>
@@ -108,7 +118,7 @@ export default function HomeFaqSection({ onOpenConsultation }) {
                 </a>
               </div>
 
-              <div className="flex items-center gap-2 text-[11px] text-slate-400 pt-3 border-t border-slate-800">
+              <div className="flex items-center gap-2 text-xs text-slate-400 pt-3 border-t border-slate-800">
                 <ShieldCheck className="w-4 h-4 text-gold-400 shrink-0" />
                 <span>100% confidential and non-binding preliminary assessment.</span>
               </div>
