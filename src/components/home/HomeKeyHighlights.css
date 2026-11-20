@@ -60,7 +60,7 @@
 }
 
 .highlight-card-numeral {
-    font-family: var(--font-serif);
+    font-family: var(--font-poppins);
     font-size: 1rem;
     font-weight: 800;
     color: #CBD5E1;
@@ -73,7 +73,7 @@
 }
 
 .highlight-card-title {
-    font-family: var(--font-serif);
+    font-family: var(--font-poppins);
     font-size: 1.25rem;
     font-weight: 700;
     color: #121B38;

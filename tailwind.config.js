@@ -51,7 +51,7 @@ export default {
                 },
             },
             fontFamily: {
-                serif: ['"Lora"', '"Playfair Display"', 'Georgia', 'serif'],
+                serif: ['"Poppins"', 'system-ui', '-apple-system', 'sans-serif'],
                 sans: ['"Poppins"', 'system-ui', '-apple-system', 'sans-serif'],
                 poppins: ['"Poppins"', 'system-ui', '-apple-system', 'sans-serif'],
             },

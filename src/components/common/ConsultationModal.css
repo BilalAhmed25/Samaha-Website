@@ -23,6 +23,19 @@
     overflow: hidden;
     color: #ffffff;
     animation: modalScaleIn 0.2s ease-out;
+    font-family: var(--font-poppins) !important;
+}
+
+.modal-dialog,
+.modal-dialog * {
+    font-family: var(--font-poppins) !important;
+}
+
+.modal-dialog button[type="submit"],
+.modal-dialog .btn-gold {
+    font-family: var(--font-poppins) !important;
+    font-weight: 700 !important;
+    letter-spacing: 0.02em;
 }
 
 @keyframes modalScaleIn {
