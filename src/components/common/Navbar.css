@@ -7,6 +7,24 @@
     width: 100%;
     z-index: 50;
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    font-family: var(--font-poppins);
+}
+
+.navbar-wrapper,
+.navbar-wrapper button,
+.navbar-wrapper a,
+.navbar-wrapper span,
+.navbar-wrapper p,
+.navbar-wrapper div,
+.navbar-wrapper h1,
+.navbar-wrapper h2,
+.navbar-wrapper h3,
+.navbar-wrapper h4,
+.navbar-wrapper h5,
+.navbar-wrapper h6,
+.mobile-drawer-panel,
+.mobile-drawer-panel * {
+    font-family: var(--font-poppins) !important;
 }
 
 .navbar-main {
