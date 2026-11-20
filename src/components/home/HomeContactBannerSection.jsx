@@ -40,10 +40,10 @@ export default function HomeContactBannerSection({ onOpenConsultation }) {
 
                                 <a
                                     href={`tel:${firmInfo.headOffice.phone.replace(/\s+/g, '')}`}
-                                    className="px-5 py-3.5 rounded-lg text-xl sm:text-2xl font-bold text-gold-400 hover:text-white transition-colors inline-flex items-center gap-2.5 cursor-pointer"
+                                    className="px-6 py-3.5 rounded-lg text-base sm:text-lg font-bold text-gold-400 hover:text-white border border-gold-400/40 hover:border-gold-400 transition-colors inline-flex items-center gap-2.5 cursor-pointer"
                                 >
-                                    <Phone className="w-6 h-6" />
-                                    <span>{firmInfo.headOffice.phone}</span>
+                                    <Phone className="w-5 h-5" />
+                                    <span>Call Now</span>
                                 </a>
                             </div>
                         </div>

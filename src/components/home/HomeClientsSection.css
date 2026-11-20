@@ -1,36 +1,36 @@
 /* Home Clients Section Styles */
 .home-clients-wrapper {
-  padding: 4.5rem 0;
-  background-color: #ffffff;
-  border-bottom: 1px solid var(--color-border-subtle);
+    padding: 4.5rem 0;
+    background-color: #ffffff;
+    border-bottom: 1px solid var(--color-border-subtle);
 }
 
 .clients-logos-grid {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
-  gap: 3rem;
-  margin-top: 2.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+    margin-top: 2.5rem;
 }
 
 .client-logo-pill {
-  padding: 1.25rem 2rem;
-  border-radius: 0.75rem;
-  background-color: var(--color-bg-alt);
-  border: 1px solid var(--color-border-subtle);
-  font-family: var(--font-serif);
-  font-family: var(--font-serif);
-  font-weight: 700;
-  font-size: 1.125rem;
-  color: #64748b;
-  letter-spacing: 0.05em;
-  transition: var(--transition-smooth);
+    padding: 1.25rem 2rem;
+    border-radius: 0.75rem;
+    background-color: var(--color-bg-alt);
+    border: 1px solid var(--color-border-subtle);
+    font-family: var(--font-serif);
+    font-family: var(--font-serif);
+    font-weight: 700;
+    font-size: 1.125rem;
+    color: #64748b;
+    letter-spacing: 0.05em;
+    transition: var(--transition-smooth);
 }
 
 .client-logo-pill:hover {
-  color: var(--color-navy-dark);
-  border-color: var(--color-border-gold);
-  transform: translateY(-2px);
-  background-color: #fbf9f4;
+    color: var(--color-navy-dark);
+    border-color: var(--color-border-gold);
+    transform: translateY(-2px);
+    background-color: #fbf9f4;
 }

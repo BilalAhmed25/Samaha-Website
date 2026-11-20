@@ -30,7 +30,7 @@ export default function FloatingWidgets() {
             >
                 <div className="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-pulse"></div>
                 <Phone className="w-4 h-4 text-gold-400" />
-                <span className="text-sm font-bold hidden sm:inline">{firmInfo.headOffice.phone}</span>
+                <span className="text-sm font-bold hidden sm:inline">Call Now</span>
             </a>
 
             <a
