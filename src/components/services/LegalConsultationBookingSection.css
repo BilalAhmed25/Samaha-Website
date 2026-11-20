@@ -5,6 +5,11 @@
     border-bottom: 1px solid var(--color-border-subtle);
 }
 
+.booking-contact-box,
+.booking-contact-box * {
+    font-family: var(--font-poppins) !important;
+}
+
 .booking-form-card {
     background-color: var(--color-bg-page);
     border-radius: 1.25rem;

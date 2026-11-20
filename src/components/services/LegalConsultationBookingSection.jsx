@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Phone, Mail, MapPin, Send, CheckCircle2, ShieldCheck, Lock, User, Building, DollarSign, MessageSquare } from 'lucide-react';
+import { Phone, Mail, MapPin, Send, CheckCircle2, User, Building, DollarSign, MessageSquare } from 'lucide-react';
 import { FaWhatsapp } from 'react-icons/fa';
 import { firmInfo } from '../../data/siteData';
 import FloatingInput from '../common/FloatingInput';
@@ -50,14 +50,14 @@ export default function LegalConsultationBookingSection() {
                             </p>
                         </div>
 
-                        <div className="space-y-4">
+                        <div className="space-y-4 booking-contact-box font-poppins">
                             <div className="flex items-start gap-3.5 p-4 rounded-xl bg-slate-50 border border-slate-200">
                                 <div className="w-10 h-10 rounded-lg bg-[#121B38] text-gold-400 flex items-center justify-center shrink-0">
                                     <Phone className="w-5 h-5" />
                                 </div>
                                 <div>
-                                    <span className="text-xs text-slate-500 font-bold block uppercase tracking-wider mb-0.5">Direct Hotline</span>
-                                    <a href={`tel:${firmInfo.headOffice.phone.replace(/\s+/g, '')}`} className="text-xl sm:text-2xl font-bold text-[#121B38] hover:text-gold-600 tracking-tight transition-colors">
+                                    <span className="text-xs text-slate-500 font-bold block uppercase tracking-wider mb-0.5 font-poppins">Direct Hotline</span>
+                                    <a href={`tel:${firmInfo.headOffice.phone.replace(/\s+/g, '')}`} className="text-xl sm:text-2xl font-bold text-[#121B38] hover:text-gold-600 tracking-tight transition-colors font-poppins">
                                         {firmInfo.headOffice.phone}
                                     </a>
                                 </div>
@@ -68,8 +68,8 @@ export default function LegalConsultationBookingSection() {
                                     <Mail className="w-5 h-5" />
                                 </div>
                                 <div>
-                                    <span className="text-xs text-slate-500 font-semibold block uppercase">Official Email</span>
-                                    <a href={`mailto:${firmInfo.headOffice.email}`} className="text-base font-bold text-[#121B38] hover:text-gold-600">
+                                    <span className="text-xs text-slate-500 font-semibold block uppercase font-poppins">Official Email</span>
+                                    <a href={`mailto:${firmInfo.headOffice.email}`} className="text-base font-bold text-[#121B38] hover:text-gold-600 font-poppins">
                                         {firmInfo.headOffice.email}
                                     </a>
                                 </div>
@@ -80,8 +80,8 @@ export default function LegalConsultationBookingSection() {
                                     <MapPin className="w-5 h-5" />
                                 </div>
                                 <div>
-                                    <span className="text-xs text-slate-500 font-semibold block uppercase">Headquarters</span>
-                                    <span className="text-sm text-slate-700 leading-snug block">
+                                    <span className="text-xs text-slate-500 font-semibold block uppercase font-poppins">Headquarters</span>
+                                    <span className="text-sm text-slate-700 leading-snug block font-poppins">
                                         API World Tower, Floor 14, Sheikh Zayed Road, Dubai
                                     </span>
                                 </div>
@@ -93,22 +93,11 @@ export default function LegalConsultationBookingSection() {
                                 href={`https://wa.me/${firmInfo.headOffice.whatsapp}?text=${encodeURIComponent("Hello Samaha Group, I want to book a legal consultation.")}`}
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="inline-flex items-center gap-2.5 px-6 py-3.5 rounded-xl bg-[#25D366] hover:bg-[#20bd5a] text-white font-bold text-sm transition-colors cursor-pointer w-full justify-center"
+                                className="inline-flex items-center gap-2.5 px-6 py-3.5 rounded-xl bg-[#25D366] hover:bg-[#20bd5a] text-white font-bold text-sm transition-colors cursor-pointer w-full justify-center font-poppins"
                             >
                                 <FaWhatsapp className="w-5 h-5 text-white" />
-                                <span>Message Us On WhatsApp</span>
+                                <span className="font-poppins">Message Us On WhatsApp</span>
                             </a>
-                        </div>
-
-                        <div className="flex items-center gap-6 pt-2 text-xs text-slate-500">
-                            <span className="flex items-center gap-1.5">
-                                <Lock className="w-4 h-4 text-gold-600" />
-                                <span>100% Confidential</span>
-                            </span>
-                            <span className="flex items-center gap-1.5">
-                                <ShieldCheck className="w-4 h-4 text-gold-600" />
-                                <span>Licensed Law Firm</span>
-                            </span>
                         </div>
                     </div>
 
