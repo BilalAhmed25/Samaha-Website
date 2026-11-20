@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import { X, CheckCircle, Phone, Mail, MessageSquare, Clock, User, Scale, Building2 } from 'lucide-react';
+import { X, CheckCircle, Phone, Mail, MessageSquare, Clock, User, Scale } from 'lucide-react';
 import { FaWhatsapp } from 'react-icons/fa';
-import { firmInfo, services, allBranches } from '../../data/siteData';
+import { firmInfo, services } from '../../data/siteData';
 import FloatingInput from './FloatingInput';
 import './ConsultationModal.css';
 
@@ -11,7 +11,6 @@ export default function ConsultationModal({ isOpen, onClose, preselectedService 
         phone: '',
         email: '',
         service: preselectedService || 'Legal Consultations',
-        branch: 'Dubai Head Office',
         urgency: 'Standard',
         details: ''
     });
@@ -26,11 +25,6 @@ export default function ConsultationModal({ isOpen, onClose, preselectedService 
         "Immigration / Golden Visa",
         "Other Legal Matter"
     ];
-
-    const branchOptions = allBranches.map(b => ({
-        value: `${b.name} (${b.country})`,
-        label: `${b.name} - ${b.city} (${b.country})`
-    }));
 
     const urgencyOptions = [
         { value: "Standard", label: "Standard (Within 24 Hours)" },
@@ -141,17 +135,7 @@ export default function ConsultationModal({ isOpen, onClose, preselectedService 
                                     />
                                 </div>
 
-                                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5">
-                                    <FloatingInput
-                                        type="select"
-                                        name="branch"
-                                        label="Preferred Office"
-                                        value={formData.branch}
-                                        onChange={(e) => setFormData({ ...formData, branch: e.target.value })}
-                                        options={branchOptions}
-                                        icon={Building2}
-                                        variant="dark"
-                                    />
+                                <div>
                                     <FloatingInput
                                         type="select"
                                         name="urgency"
