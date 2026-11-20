@@ -435,21 +435,7 @@ export default function Navbar({ onOpenConsultation }) {
 
                         {/* 3. Partners & Group Entities Mega Menu */}
                         {activeMegaMenu === 'partners' && (
-                            <div className="space-y-6">
-                                <div className="flex items-center justify-between pb-3.5 border-b border-white/10">
-                                    <div className="flex items-center gap-3">
-                                        <span className="text-sm font-bold uppercase tracking-wider text-gold-400">
-                                            Samaha Group Entities & Professional Subsidiaries
-                                        </span>
-                                        <span className="text-sm text-slate-300">
-                                            Integrated Legal, Corporate, Debt Recovery & Mobility Solutions
-                                        </span>
-                                    </div>
-                                    <span className="text-sm text-slate-300 font-medium">
-                                        Established 1991
-                                    </span>
-                                </div>
-
+                            <div className="py-2">
                                 <div className="grid grid-cols-5 gap-4">
                                     {partners.map((partner, pIdx) => {
                                         const PartnerIcon = iconMap[partner.icon] || Globe;
