@@ -125,6 +125,67 @@
     color: #070F1A;
 }
 
+/* Legal Services Separated Cards */
+.mega-menu-service-card {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.875rem;
+    padding: 0.875rem 1rem;
+    border-radius: 0.75rem;
+    background-color: rgba(255, 255, 255, 0.035);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    transition: all 0.22s cubic-bezier(0.16, 1, 0.3, 1);
+    box-shadow: none !important;
+    text-decoration: none;
+}
+
+.mega-menu-service-card:hover {
+    background-color: rgba(255, 255, 255, 0.08);
+    border-color: rgba(197, 168, 128, 0.5);
+    transform: translateY(-2px);
+}
+
+.mega-menu-service-icon {
+    width: 2.375rem;
+    height: 2.375rem;
+    border-radius: 0.625rem;
+    background-color: rgba(197, 168, 128, 0.12);
+    color: var(--color-gold-base);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    transition: all 0.22s ease;
+}
+
+.mega-menu-service-card:hover .mega-menu-service-icon {
+    background-color: var(--color-gold-base);
+    color: #070F1A;
+}
+
+.mega-menu-service-title {
+    font-size: 0.8875rem;
+    font-weight: 700;
+    color: #ffffff;
+    line-height: 1.35;
+    transition: color 0.2s ease;
+}
+
+.mega-menu-service-card:hover .mega-menu-service-title {
+    color: var(--color-gold-light);
+}
+
+.mega-menu-service-desc {
+    font-size: 0.75rem;
+    color: #94A3B8;
+    line-height: 1.4;
+    margin-top: 0.25rem;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
 .header-logo-white {
     filter: brightness(0) invert(1);
     transition: opacity 0.2s ease, transform 0.2s ease;

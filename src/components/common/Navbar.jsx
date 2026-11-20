@@ -56,19 +56,6 @@ export default function Navbar({ onOpenConsultation }) {
         };
     }, [mobileMenuOpen]);
 
-    // Service categories for Mega Menu
-    const litigationServices = services.filter(s =>
-        ['criminal-law', 'civil-commercial-cases', 'personal-status-family-law', 'international-arbitration'].includes(s.id)
-    );
-
-    const corporateServices = services.filter(s =>
-        ['legal-consultations', 'business-corporate-law', 'real-estate-disputes', 'financial-law'].includes(s.id)
-    );
-
-    const regulatoryServices = services.filter(s =>
-        ['maritime-law', 'labor-law', 'taxes', 'trademark-laws'].includes(s.id)
-    );
-
     return (
         <header
             className="navbar-wrapper"
@@ -221,141 +208,61 @@ export default function Navbar({ onOpenConsultation }) {
             {activeMegaMenu && (
                 <div className="mega-menu-wrapper hidden lg:block">
                     <div className="site-container py-7">
-                        {/* 1. Legal Services Mega Menu */}
+                        {/* 1. Legal Services Mega Menu - Separated Cards Grid */}
                         {activeMegaMenu === 'services' && (
-                            <div className="py-2">
-                                <div className="grid grid-cols-12 gap-6">
-                                    {/* Column 1: Litigation & Defense */}
-                                    <div className="col-span-3 space-y-3">
-                                        <h4 className="text-sm font-bold uppercase tracking-wider text-gold-300 px-2">
-                                            Litigation & Defense
-                                        </h4>
-                                        <div className="space-y-1">
-                                            {litigationServices.map((svc) => {
-                                                const IconComp = iconMap[svc.icon] || Scale;
-                                                return (
-                                                    <Link
-                                                        key={svc.id}
-                                                        to={`/${svc.id}`}
-                                                        onClick={() => setActiveMegaMenu(null)}
-                                                        className="mega-menu-item flex items-start gap-3"
-                                                    >
-                                                        <div className="mega-item-icon w-8 h-8 rounded-lg bg-gold-500/10 text-gold-400 flex items-center justify-center shrink-0 mt-0.5">
-                                                            <IconComp className="w-4 h-4" />
-                                                        </div>
-                                                        <div className="min-w-0">
-                                                            <div className="mega-item-title text-[15px] font-bold text-white truncate">
-                                                                {svc.title}
-                                                            </div>
-                                                            <div className="text-xs text-slate-300 line-clamp-1 mt-0.5">
-                                                                {svc.shortDesc}
-                                                            </div>
-                                                        </div>
-                                                    </Link>
-                                                );
-                                            })}
-                                        </div>
-                                    </div>
-
-                                    {/* Column 2: Corporate & Commercial */}
-                                    <div className="col-span-3 space-y-3">
-                                        <h4 className="text-sm font-bold uppercase tracking-wider text-gold-300 px-2">
-                                            Corporate & Commercial
-                                        </h4>
-                                        <div className="space-y-1">
-                                            {corporateServices.map((svc) => {
-                                                const IconComp = iconMap[svc.icon] || Briefcase;
-                                                return (
-                                                    <Link
-                                                        key={svc.id}
-                                                        to={`/${svc.id}`}
-                                                        onClick={() => setActiveMegaMenu(null)}
-                                                        className="mega-menu-item flex items-start gap-3"
-                                                    >
-                                                        <div className="mega-item-icon w-8 h-8 rounded-lg bg-gold-500/10 text-gold-400 flex items-center justify-center shrink-0 mt-0.5">
-                                                            <IconComp className="w-4 h-4" />
-                                                        </div>
-                                                        <div className="min-w-0">
-                                                            <div className="mega-item-title text-[15px] font-bold text-white truncate">
-                                                                {svc.title}
-                                                            </div>
-                                                            <div className="text-xs text-slate-300 line-clamp-1 mt-0.5">
-                                                                {svc.shortDesc}
-                                                            </div>
-                                                        </div>
-                                                    </Link>
-                                                );
-                                            })}
-                                        </div>
-                                    </div>
-
-                                    {/* Column 3: Regulatory & Industry */}
-                                    <div className="col-span-3 space-y-3">
-                                        <h4 className="text-sm font-bold uppercase tracking-wider text-gold-300 px-2">
-                                            Regulatory & Industry
-                                        </h4>
-                                        <div className="space-y-1">
-                                            {regulatoryServices.map((svc) => {
-                                                const IconComp = iconMap[svc.icon] || Award;
-                                                return (
-                                                    <Link
-                                                        key={svc.id}
-                                                        to={`/${svc.id}`}
-                                                        onClick={() => setActiveMegaMenu(null)}
-                                                        className="mega-menu-item flex items-start gap-3"
-                                                    >
-                                                        <div className="mega-item-icon w-8 h-8 rounded-lg bg-gold-500/10 text-gold-400 flex items-center justify-center shrink-0 mt-0.5">
-                                                            <IconComp className="w-4 h-4" />
-                                                        </div>
-                                                        <div className="min-w-0">
-                                                            <div className="mega-item-title text-[15px] font-bold text-white truncate">
-                                                                {svc.title}
-                                                            </div>
-                                                            <div className="text-xs text-slate-300 line-clamp-1 mt-0.5">
-                                                                {svc.shortDesc}
-                                                            </div>
-                                                        </div>
-                                                    </Link>
-                                                );
-                                            })}
-                                        </div>
-                                    </div>
-
-                                    {/* Column 4: 24/7 Helpline Spotlight Card */}
-                                    <div className="col-span-3 rounded-xl p-6 bg-[#121B38] border border-gold-500/30 flex flex-col justify-between">
-                                        <div className="space-y-2.5">
-                                            <span className="text-xs uppercase font-bold tracking-widest text-gold-400 bg-gold-500/10 px-2.5 py-1 rounded border border-gold-500/20 inline-block">
-                                                Direct Legal Helpline
-                                            </span>
-                                            <h5 className="text-lg font-serif font-bold text-white">
-                                                Need Immediate Case Evaluation?
-                                            </h5>
-                                            <p className="text-sm text-slate-200 leading-relaxed">
-                                                Speak directly with our on-duty senior legal coordinator or schedule a confidential consultation.
-                                            </p>
-                                        </div>
-
-                                        <div className="pt-4 space-y-2.5">
-                                            <a
-                                                href={`https://wa.me/${firmInfo.headOffice.whatsapp}?text=Hello%20Samaha%20Lawyers%2C%20I%20urgently%20need%20a%20legal%20consultation.`}
-                                                target="_blank"
-                                                rel="noopener noreferrer"
-                                                className="w-full py-3 px-4 rounded-lg text-sm font-semibold text-emerald-400 bg-emerald-950/60 border border-emerald-700/80 hover:bg-emerald-900/60 transition-colors flex items-center justify-center gap-2 cursor-pointer"
+                            <div className="py-2 space-y-4">
+                                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-3.5">
+                                    {services.map((svc) => {
+                                        const IconComp = iconMap[svc.icon] || Scale;
+                                        return (
+                                            <Link
+                                                key={svc.id}
+                                                to={`/${svc.id}`}
+                                                onClick={() => setActiveMegaMenu(null)}
+                                                className="mega-menu-service-card group cursor-pointer"
                                             >
-                                                <FaWhatsapp className="w-4 h-4 text-emerald-400" />
-                                                <span>WhatsApp Helpline</span>
-                                            </a>
-                                            <button
-                                                type="button"
-                                                onClick={() => {
-                                                    setActiveMegaMenu(null);
-                                                    onOpenConsultation();
-                                                }}
-                                                className="w-full btn-gold text-sm py-3 px-4 text-center cursor-pointer font-bold"
-                                            >
-                                                Book Consultation
-                                            </button>
-                                        </div>
+                                                <div className="mega-menu-service-icon">
+                                                    <IconComp className="w-5 h-5" />
+                                                </div>
+                                                <div className="min-w-0 flex-1">
+                                                    <div className="mega-menu-service-title">
+                                                        {svc.title}
+                                                    </div>
+                                                    <p className="mega-menu-service-desc">
+                                                        {svc.shortDesc}
+                                                    </p>
+                                                </div>
+                                                <ArrowRight className="w-3.5 h-3.5 text-slate-500 group-hover:text-gold-400 group-hover:translate-x-1 transition-all shrink-0 mt-1" />
+                                            </Link>
+                                        );
+                                    })}
+                                </div>
+
+                                {/* Bottom Quick Action Bar */}
+                                <div className="pt-3.5 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-3">
+                                    <div className="flex items-center gap-2 text-xs text-slate-300">
+                                        <span className="w-2 h-2 rounded-full bg-emerald-400 inline-block"></span>
+                                        <span>Full audience rights across UAE Federal, Dubai, ADGM, DIFC & International Arbitral Tribunals.</span>
+                                    </div>
+                                    <div className="flex items-center gap-4">
+                                        <Link
+                                            to="/legal-services"
+                                            onClick={() => setActiveMegaMenu(null)}
+                                            className="text-xs font-semibold text-gold-400 hover:text-white flex items-center gap-1.5 transition-colors"
+                                        >
+                                            <span>All Practice Areas Directory</span>
+                                            <ArrowRight className="w-3.5 h-3.5" />
+                                        </Link>
+                                        <button
+                                            type="button"
+                                            onClick={() => {
+                                                setActiveMegaMenu(null);
+                                                onOpenConsultation();
+                                            }}
+                                            className="btn-gold text-xs py-1.5 px-4 font-semibold cursor-pointer"
+                                        >
+                                            Book Consultation
+                                        </button>
                                     </div>
                                 </div>
                             </div>
