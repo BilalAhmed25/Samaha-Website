@@ -30,39 +30,39 @@ export default function Footer({ onOpenConsultation }) {
                         </button>
                         <a
                             href={`tel:${firmInfo.headOffice.phone.replace(/\s+/g, '')}`}
-                            className="px-5 py-3 rounded-lg text-lg font-bold text-white border border-slate-700 hover:bg-slate-800/60 transition-colors flex items-center gap-2 cursor-pointer"
+                            className="px-5 py-3 rounded-lg text-base sm:text-lg font-bold text-white border border-slate-700 hover:bg-slate-800/60 transition-colors flex items-center gap-2 cursor-pointer"
                         >
                             <Phone className="w-5 h-5 text-gold-400" />
-                            <span className="text-lg font-bold">{firmInfo.headOffice.phone}</span>
+                            <span>Call Now</span>
                         </a>
                     </div>
                 </div>
             </div>
 
-            {/* Main Directory */}
-            <div className="site-container py-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10">
+            {/* Main Directory: 12-column grid gives equal generous space to all columns */}
+            <div className="site-container py-14 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-12 gap-8 xl:gap-10">
                 {/* Brand & Conglomerate */}
-                <div className="lg:col-span-2 space-y-4">
+                <div className="lg:col-span-3 space-y-3.5">
                     {/* Logo: Pure white, no background, no text following it */}
                     <Link to="/" className="inline-block py-1 group" aria-label="Samaha Lawyers Homepage">
                         <img
                             src="/logo.png"
                             alt="Samaha Lawyers & Legal Consultants"
-                            className="h-12 sm:h-14 w-auto object-contain footer-logo-white"
+                            className="h-11 sm:h-12 w-auto object-contain footer-logo-white"
                         />
                     </Link>
 
-                    <p className="text-slate-300 text-sm sm:text-base leading-relaxed max-w-md">
+                    <p className="text-slate-400 text-xs leading-relaxed max-w-[270px]">
                         Samaha Group is a premier international legal conglomerate delivering uncompromising advocacy, corporate structuring, and cross-border litigation services. Accredited before all UAE Federal, Commercial, and International Arbitration courts.
                     </p>
                 </div>
 
                 {/* Practice Areas */}
-                <div>
-                    <h4 className="text-white font-serif font-bold text-base mb-4 pb-2 border-b border-slate-800">
+                <div className="lg:col-span-3">
+                    <h4 className="text-white font-serif font-bold text-sm sm:text-base mb-4 pb-2 border-b border-slate-800">
                         Practice Areas
                     </h4>
-                    <ul className="space-y-2.5 text-sm">
+                    <ul className="space-y-2.5">
                         {services.slice(0, 7).map(s => (
                             <li key={s.id}>
                                 <Link to={`/${s.id}`} className="footer-link">
@@ -81,11 +81,11 @@ export default function Footer({ onOpenConsultation }) {
                 </div>
 
                 {/* Global Offices */}
-                <div>
-                    <h4 className="text-white font-serif font-bold text-base mb-4 pb-2 border-b border-slate-800">
+                <div className="lg:col-span-3">
+                    <h4 className="text-white font-serif font-bold text-sm sm:text-base mb-4 pb-2 border-b border-slate-800">
                         Global Offices
                     </h4>
-                    <ul className="space-y-2.5 text-sm">
+                    <ul className="space-y-2.5">
                         {countries.map(c => (
                             <li key={c.id}>
                                 <Link to={`/branches#${c.id}`} className="footer-link">
@@ -93,7 +93,7 @@ export default function Footer({ onOpenConsultation }) {
                                     <img
                                         src={c.flag}
                                         alt={c.name}
-                                        className="w-5 h-3.5 object-cover rounded-[2px] border border-white/20 shrink-0 inline-block"
+                                        className="w-4 h-3 object-cover rounded-[2px] border border-white/20 shrink-0 inline-block"
                                     />
                                     <span>{c.name}</span>
                                 </Link>
@@ -102,12 +102,12 @@ export default function Footer({ onOpenConsultation }) {
                     </ul>
                 </div>
 
-                {/* Partners & Group Entities (Replaces Head Office per user request) */}
-                <div>
-                    <h4 className="text-white font-serif font-bold text-base mb-4 pb-2 border-b border-slate-800">
-                        Partners & Group Entities:
+                {/* Partners & Group Entities */}
+                <div className="lg:col-span-3">
+                    <h4 className="text-white font-serif font-bold text-sm sm:text-base mb-4 pb-2 border-b border-slate-800">
+                        Partners & Group Entities
                     </h4>
-                    <ul className="space-y-2.5 text-sm">
+                    <ul className="space-y-2.5">
                         {partners.map((partner, pIdx) => (
                             <li key={pIdx}>
                                 {partner.internalPath ? (
