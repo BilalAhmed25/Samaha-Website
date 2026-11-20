@@ -1,0 +1,102 @@
+/* Home Services Section Styles */
+.home-services-wrapper {
+    padding: 5.5rem 0;
+    background-color: var(--color-bg-page);
+}
+
+/* 3D Flip Card Container */
+.home-service-flip-container {
+    perspective: 1200px;
+    height: 380px;
+    width: 100%;
+}
+
+@media (max-width: 640px) {
+    .home-service-flip-container {
+        height: 340px;
+        width: 100%;
+    }
+}
+
+.home-service-flip-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: transform 0.65s cubic-bezier(0.23, 1, 0.32, 1);
+    border-radius: 1rem;
+    box-shadow: none !important;
+}
+
+/* Trigger 3D flip on hover (desktop) or when active/flipped (touch) */
+.home-service-flip-container:hover .home-service-flip-inner,
+.home-service-flip-container:focus-within .home-service-flip-inner,
+.home-service-flip-inner.is-flipped {
+    transform: rotateY(180deg);
+}
+
+/* Common Face Styling */
+.home-service-flip-front,
+.home-service-flip-back {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    border-radius: 1rem;
+    padding: 1.75rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: none !important;
+}
+
+/* FRONT FACE */
+.home-service-flip-front {
+    background-color: #ffffff;
+    border: 1px solid var(--color-border-subtle);
+    transform: rotateY(0deg);
+    z-index: 2;
+    transition: border-color 0.25s ease;
+    pointer-events: auto;
+}
+
+.home-service-flip-container:hover .home-service-flip-front {
+    border-color: var(--color-primary-navy);
+    pointer-events: none;
+}
+
+.home-service-icon {
+    width: 3.25rem;
+    height: 3.25rem;
+    border-radius: 0.75rem;
+    background-color: rgba(35, 51, 104, 0.08);
+    color: var(--color-primary-navy);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: var(--transition-smooth);
+}
+
+.home-service-flip-container:hover .home-service-icon {
+    background-color: var(--color-primary-navy);
+    color: #ffffff;
+}
+
+/* BACK FACE (3D Flipped) */
+.home-service-flip-back {
+    background: linear-gradient(150deg, #121B38 0%, #1A2752 50%, #233368 100%);
+    border: 1px solid rgba(197, 168, 128, 0.55);
+    color: #ffffff;
+    transform: rotateY(180deg);
+    z-index: 1;
+    pointer-events: none;
+    transition: border-color 0.25s ease;
+}
+
+.home-service-flip-container:hover .home-service-flip-back,
+.home-service-flip-inner.is-flipped .home-service-flip-back {
+    border-color: #C5A880;
+    pointer-events: auto;
+}

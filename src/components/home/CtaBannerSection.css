@@ -1,0 +1,22 @@
+/* CTA Banner Section Styles */
+.cta-banner-wrapper {
+  padding-top: 2rem;
+  padding-bottom: 5rem;
+}
+
+.cta-banner-card {
+  position: relative;
+  border-radius: 1.5rem;
+  background: linear-gradient(135deg, var(--color-navy-dark) 0%, var(--color-primary-navy) 50%, var(--color-navy-surface) 100%);
+  color: #ffffff;
+  padding: 2.5rem;
+  border: 1px solid var(--color-border-gold);
+  overflow: hidden;
+  box-shadow: var(--shadow-luxury);
+}
+
+@media (min-width: 640px) {
+  .cta-banner-card {
+    padding: 3.5rem;
+  }
+}

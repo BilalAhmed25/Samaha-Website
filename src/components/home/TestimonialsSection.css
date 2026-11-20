@@ -1,0 +1,16 @@
+/* Testimonials Section Styles */
+.testimonials-wrapper {
+  background-color: var(--color-primary-navy);
+  color: #ffffff;
+  padding: 5rem 0;
+}
+
+.testimonial-quote-card {
+  padding: 2rem;
+  border-radius: 1rem;
+  background-color: rgba(15, 23, 42, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}

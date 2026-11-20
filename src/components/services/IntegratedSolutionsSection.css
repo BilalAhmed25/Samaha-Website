@@ -1,0 +1,40 @@
+/* Integrated Solutions Section Styles */
+.integrated-solutions-wrapper {
+    padding: 5.5rem 0;
+    background-color: var(--color-bg-page);
+    border-bottom: 1px solid var(--color-border-subtle);
+}
+
+.integrated-card {
+    background-color: #ffffff;
+    border-radius: 1rem;
+    border: 1px solid var(--color-border-subtle);
+    padding: 1.75rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: border-color 0.25s ease;
+    box-shadow: none !important;
+}
+
+.integrated-card:hover {
+    border-color: var(--color-primary-navy);
+}
+
+.integrated-icon-wrap {
+    width: 3.25rem;
+    height: 3.25rem;
+    border-radius: 0.75rem;
+    background-color: rgba(35, 51, 104, 0.08);
+    color: var(--color-primary-navy);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.25rem;
+    transition: var(--transition-smooth);
+}
+
+.integrated-card:hover .integrated-icon-wrap {
+    background-color: var(--color-primary-navy);
+    color: #ffffff;
+}

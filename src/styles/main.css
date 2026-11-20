@@ -1,0 +1,231 @@
+/* Main CSS: Global Theme, Palette, Widths, Typography & Variables */
+:root {
+    /* Color Palette - Exactly from Logo */
+    --color-primary-navy: #233368;
+    /* Exact Logo Royal Blue */
+    --color-navy-dark: #121B38;
+    /* Logo Deep Blue Foundation */
+    --color-navy-deep: #0B1124;
+    /* Deepest Contrast Base */
+    --color-navy-light: #2E4282;
+    /* Hover & Interactive Blue */
+    --color-navy-surface: #1C2954;
+    /* Elevated Card/Surface Tone */
+    --color-navy-subtle: #F0F4FA;
+    /* Subtle Brand Blue Wash */
+
+    --color-logo-charcoal: #3B3835;
+    /* Exact Logo Charcoal / Bronze Tone */
+    --color-charcoal-light: #54504C;
+    --color-charcoal-subtle: #F6F5F4;
+
+    --color-gold: #C5A880;
+    --color-gold-base: #C5A880;
+    --color-gold-light: #DFB76C;
+    --color-gold-dark: #9E7D4E;
+    --color-gold-muted: rgba(197, 168, 128, 0.15);
+
+    --color-bg-page: #FBFBFC;
+    --color-bg-alt: #F2F5F9;
+    --color-card-bg: #FFFFFF;
+
+    --color-text-main: #1E293B;
+    --color-text-muted: #5A6A80;
+    --color-text-light: #F8FAFC;
+    --color-text-gold: #DFB76C;
+
+    --color-border-subtle: #E2E8F0;
+    --color-border-dark: #233368;
+    --color-border-gold: rgba(197, 168, 128, 0.35);
+
+    --color-emerald: #10B981;
+    --color-emerald-dark: #064E3B;
+
+    /* Typography */
+    --font-serif: 'Playfair Display', Georgia, serif;
+    --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    --font-mont: 'Mont', 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+
+    /* Expanded Layout & Widths (Widescreen Luxury Standard) */
+    --site-max-width: 1540px;
+    --site-content-width: 1420px;
+    --site-narrow-width: 1060px;
+    --container-padding: 1.5rem;
+    --header-height: 80px;
+
+    /* Elevation & Shadows: COMPLETELY REMOVED per user request */
+    --shadow-sm: none;
+    --shadow-md: none;
+    --shadow-lg: none;
+    --shadow-luxury: none;
+    --shadow-gold: none;
+
+    /* Transitions */
+    --transition-smooth: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Universal Shadow Removal - Enforces zero shadow across every single element */
+*,
+*::before,
+*::after {
+    box-shadow: none !important;
+    text-shadow: none !important;
+    -webkit-box-shadow: none !important;
+}
+
+/* Global Reset & Base */
+html {
+    scroll-behavior: smooth;
+    font-size: 16px;
+    font-family: var(--font-sans);
+    background-color: var(--color-bg-page);
+    color: var(--color-text-main);
+    -webkit-font-smoothing: antialiased;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--color-bg-page);
+    color: var(--color-text-main);
+    font-size: 1rem;
+    line-height: 1.65;
+}
+
+p {
+    font-family: var(--font-mont);
+    font-size: 1rem;
+    line-height: 1.65;
+}
+
+h1,
+h2,
+h3,
+h4,
+.serif-heading {
+    font-family: var(--font-serif);
+}
+
+/* Central Layout Container - Expands smoothly up to 1540px */
+.site-container {
+    width: 100%;
+    max-width: var(--site-max-width);
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: var(--container-padding);
+    padding-right: var(--container-padding);
+}
+
+@media (min-width: 768px) {
+    :root {
+        --container-padding: 2.25rem;
+    }
+}
+
+@media (min-width: 1280px) {
+    :root {
+        --container-padding: 3rem;
+    }
+}
+
+/* Universal Button Styles */
+.btn-gold {
+    background: linear-gradient(135deg, var(--color-gold-light) 0%, var(--color-gold) 50%, var(--color-gold-dark) 100%);
+    color: var(--color-navy-dark);
+    font-weight: 700;
+    border-radius: 0.5rem;
+    padding: 0.75rem 1.5rem;
+    transition: var(--transition-smooth);
+    box-shadow: none !important;
+    border: none;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.btn-gold:hover {
+    opacity: 0.95;
+    transform: translateY(-1px);
+}
+
+.btn-gold:active {
+    transform: scale(0.98);
+}
+
+.btn-outline-gold {
+    background: transparent;
+    color: var(--color-gold-light);
+    border: 1px solid var(--color-border-gold);
+    border-radius: 0.5rem;
+    padding: 0.75rem 1.5rem;
+    font-weight: 600;
+    transition: var(--transition-smooth);
+    box-shadow: none !important;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.btn-outline-gold:hover {
+    background: rgba(197, 168, 128, 0.1);
+    border-color: var(--color-gold-light);
+}
+
+/* Primary Brand Button (Direct Logo Navy) */
+.btn-primary-navy {
+    background-color: var(--color-primary-navy);
+    color: #ffffff;
+    font-weight: 600;
+    border-radius: 0.5rem;
+    padding: 0.75rem 1.5rem;
+    transition: var(--transition-smooth);
+    border: none;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.btn-primary-navy:hover {
+    background-color: var(--color-navy-light);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--color-navy-dark);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--color-primary-navy);
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--color-navy-light);
+}
+
+/* Page Hero Architectural Texture & Grid Lines */
+.page-hero-texture {
+    background-color: var(--color-navy-dark);
+    position: relative;
+    overflow: hidden;
+    background-image:
+        linear-gradient(to right, rgba(197, 168, 128, 0.08) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(197, 168, 128, 0.08) 1px, transparent 1px),
+        linear-gradient(to right, rgba(255, 255, 255, 0.035) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(255, 255, 255, 0.035) 1px, transparent 1px),
+        radial-gradient(ellipse 70% 50% at 50% 0%, rgba(35, 51, 104, 0.65), transparent 80%),
+        radial-gradient(ellipse 50% 40% at 50% -15%, rgba(197, 168, 128, 0.22), transparent 75%);
+    background-size: 120px 120px, 120px 120px, 24px 24px, 24px 24px, 100% 100%, 100% 100%;
+    background-position: center center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}

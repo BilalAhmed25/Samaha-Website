@@ -1,0 +1,164 @@
+/* Floating Input Component Styles */
+.floating-input-wrapper {
+    position: relative;
+    width: 100%;
+    border-radius: 0.75rem;
+    transition: border-color 0.2s ease, background-color 0.2s ease;
+    box-shadow: none !important;
+}
+
+/* Light Variant (Used in Contact Form, Page Forms) */
+.floating-input-light {
+    background-color: #ffffff;
+    border: 1px solid var(--color-border-subtle);
+}
+
+.floating-input-light.is-focused {
+    border-color: var(--color-primary-navy);
+}
+
+.floating-input-light .floating-input-control {
+    color: #0f172a;
+}
+
+.floating-input-light .floating-input-icon {
+    color: #94a3b8;
+}
+
+.floating-input-light.is-focused .floating-input-icon {
+    color: var(--color-primary-navy);
+}
+
+.floating-input-light .floating-input-label {
+    color: #64748b;
+}
+
+.floating-input-light.is-focused .floating-input-label {
+    color: var(--color-primary-navy);
+}
+
+/* Dark Variant (Used in Consultation Modal / Popup) */
+.floating-input-dark {
+    background-color: rgba(18, 27, 56, 0.75);
+    border: 1px solid rgba(255, 255, 255, 0.16);
+}
+
+.floating-input-dark.is-focused {
+    border-color: var(--color-gold-base);
+}
+
+.floating-input-dark .floating-input-control {
+    color: #ffffff;
+}
+
+.floating-input-dark .floating-input-icon {
+    color: #94a3b8;
+}
+
+.floating-input-dark.is-focused .floating-input-icon {
+    color: var(--color-gold-base);
+}
+
+.floating-input-dark .floating-input-label {
+    color: #94a3b8;
+}
+
+.floating-input-dark.is-focused .floating-input-label {
+    color: var(--color-gold-base);
+}
+
+/* Icon Positioning */
+.floating-input-icon {
+    position: absolute;
+    left: 0.95rem;
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: color 0.2s ease;
+    z-index: 2;
+}
+
+.floating-input-wrapper.is-textarea .floating-input-icon {
+    top: 1.15rem;
+    transform: none;
+}
+
+/* Control (Input / Select / Textarea) */
+.floating-input-control {
+    width: 100%;
+    height: 3.5rem;
+    padding: 1.25rem 1rem 0.35rem 2.75rem;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    border-radius: 0.75rem;
+    box-shadow: none !important;
+}
+
+.floating-input-wrapper.is-textarea .floating-input-control {
+    height: auto;
+    padding-top: 1.5rem;
+    padding-bottom: 0.75rem;
+    resize: none;
+}
+
+.floating-select-control {
+    appearance: none;
+    -webkit-appearance: none;
+    cursor: pointer;
+    padding-right: 2.5rem;
+}
+
+/* Select Arrow */
+.floating-select-arrow {
+    position: absolute;
+    right: 0.95rem;
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none;
+    color: #94a3b8;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Floating Label Behavior */
+.floating-input-label {
+    position: absolute;
+    left: 2.75rem;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 0.875rem;
+    pointer-events: none;
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    transform-origin: left top;
+    z-index: 2;
+    white-space: nowrap;
+    max-width: calc(100% - 3.5rem);
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.floating-input-wrapper.is-textarea .floating-input-label {
+    top: 1.15rem;
+    transform: none;
+}
+
+/* Active Floating State (Focused or Has Value) */
+.floating-input-wrapper.is-floating .floating-input-label {
+    top: 0.45rem;
+    transform: none;
+    font-size: 0.6875rem; /* 11px */
+    font-weight: 600;
+    letter-spacing: normal;
+    text-transform: none;
+}
+
+.floating-input-wrapper.is-textarea.is-floating .floating-input-label {
+    top: 0.45rem;
+}

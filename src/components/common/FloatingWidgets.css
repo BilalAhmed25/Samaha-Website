@@ -1,0 +1,67 @@
+/* Floating Action Widgets Styles */
+.floating-widgets-container {
+    position: fixed;
+    bottom: 1.5rem;
+    right: 1.5rem;
+    z-index: 40;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 0.75rem;
+    pointer-events: none;
+}
+
+.floating-btn-scroll {
+    pointer-events: auto;
+    padding: 0.75rem;
+    border-radius: 9999px;
+    background-color: var(--color-primary-navy);
+    color: var(--color-gold);
+    border: 1px solid #334155;
+    box-shadow: var(--shadow-lg);
+    transition: var(--transition-smooth);
+}
+
+.floating-btn-scroll:hover {
+    color: #ffffff;
+    transform: scale(1.05);
+}
+
+.floating-btn-phone {
+    pointer-events: auto;
+    display: flex;
+    align-items: center;
+    gap: 0.625rem;
+    padding: 0.75rem 1rem;
+    border-radius: 9999px;
+    background-color: var(--color-primary-navy);
+    color: #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    box-shadow: var(--shadow-luxury);
+    transition: var(--transition-smooth);
+}
+
+.floating-btn-phone:hover {
+    border-color: var(--color-gold);
+    transform: scale(1.04);
+}
+
+.floating-btn-whatsapp {
+    pointer-events: auto;
+    display: flex;
+    align-items: center;
+    gap: 0.625rem;
+    padding: 0.875rem 1.25rem;
+    border-radius: 9999px;
+    background-color: #25d366;
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 0.875rem;
+    box-shadow: 0 10px 25px -5px rgba(37, 211, 102, 0.4);
+    transition: var(--transition-smooth);
+}
+
+.floating-btn-whatsapp:hover {
+    background-color: #20ba59;
+    transform: scale(1.05);
+}

@@ -1,0 +1,35 @@
+/* Services Grid Styles */
+.services-grid-wrapper {
+  padding: 4rem 0 5rem 0;
+}
+
+.service-card-full {
+  background-color: #ffffff;
+  border-radius: 1rem;
+  border: 1px solid var(--color-border-subtle);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  transition: var(--transition-smooth);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.service-card-full:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-luxury);
+  border-color: var(--color-border-gold);
+}
+
+.service-card-banner {
+  height: 12rem;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.service-card-banner img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}

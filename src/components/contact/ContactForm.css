@@ -1,0 +1,23 @@
+/* Contact Form Styles */
+.contact-form-card {
+  background-color: #ffffff;
+  border-radius: 1rem;
+  border: 1px solid var(--color-border-subtle);
+  padding: 2rem;
+  box-shadow: var(--shadow-sm);
+}
+
+.contact-form-input {
+  width: 100%;
+  padding: 0.625rem 0.875rem;
+  border-radius: 0.5rem;
+  border: 1px solid #cbd5e1;
+  font-size: 0.8125rem;
+  color: var(--color-text-main);
+  outline: none;
+  transition: border-color 0.2s ease;
+}
+
+.contact-form-input:focus {
+  border-color: var(--color-gold);
+}

@@ -1,0 +1,42 @@
+/* Practice Areas Section Styles */
+.practice-areas-wrapper {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+
+.practice-card {
+  position: relative;
+  background-color: #ffffff;
+  border: 1px solid var(--color-border-subtle);
+  border-radius: 1rem;
+  padding: 1.75rem;
+  box-shadow: var(--shadow-sm);
+  transition: var(--transition-smooth);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.practice-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-luxury);
+  border-color: var(--color-border-gold);
+}
+
+.practice-icon-box {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 0.75rem;
+  background-color: var(--color-gold-muted);
+  color: var(--color-gold-dark);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.25rem;
+  transition: var(--transition-smooth);
+}
+
+.practice-card:hover .practice-icon-box {
+  background: linear-gradient(135deg, var(--color-gold-light), var(--color-gold-dark));
+  color: var(--color-navy-dark);
+}

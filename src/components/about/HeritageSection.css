@@ -1,0 +1,12 @@
+/* Heritage Section Styles */
+.heritage-wrapper {
+    padding: 5rem 0;
+}
+
+.heritage-vision-box {
+    padding: 1.5rem;
+    border-radius: 1rem;
+    background-color: #fbf9f4;
+    border: 1px solid #e0d0b5;
+    color: var(--color-navy-dark);
+}

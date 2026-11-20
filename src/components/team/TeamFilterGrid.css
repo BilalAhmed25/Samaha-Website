@@ -1,0 +1,40 @@
+/* Team Filter Grid Styles */
+.team-grid-wrapper {
+    padding: 3rem 0 5rem 0;
+}
+
+.team-member-card {
+    background-color: #ffffff;
+    border-radius: 1rem;
+    border: 1px solid var(--color-border-subtle);
+    overflow: hidden;
+    transition: border-color 0.2s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* No zoom or transform on hover per user request */
+.team-member-card:hover {
+    border-color: var(--color-primary-navy);
+}
+
+.team-member-img-wrap {
+    aspect-ratio: 5 / 7;
+    width: 100%;
+    background: var(--color-navy-dark);
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Completely visible image with zero cropping */
+.team-member-img-wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center center;
+    display: block;
+}

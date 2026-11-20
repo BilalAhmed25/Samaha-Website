@@ -1,0 +1,38 @@
+/* Floating WhatsApp Button Styles */
+.floating-whatsapp-btn {
+  position: fixed;
+  bottom: 1.5rem;
+  right: 1.5rem;
+  z-index: 50;
+  width: 3.5rem;
+  height: 3.5rem;
+  border-radius: 9999px;
+  background-color: #25D366; /* Official WhatsApp green */
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  box-shadow: none !important; /* No shadow per user request */
+  border: none;
+  outline: none;
+  transition: background-color 0.25s ease, transform 0.2s ease;
+  cursor: pointer;
+}
+
+/* Make button color darker on hover per user request */
+.floating-whatsapp-btn:hover {
+  background-color: #128C7E; /* Darker WhatsApp teal-green */
+  color: #ffffff;
+  box-shadow: none !important; /* Still no shadow */
+}
+
+.floating-whatsapp-btn:active {
+  background-color: #075E54; /* Even darker on click */
+  box-shadow: none !important;
+}
+
+.floating-whatsapp-icon {
+  width: 1.85rem;
+  height: 1.85rem;
+}

@@ -1,0 +1,21 @@
+/* Service Detail Content Styles */
+.service-content-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+.service-capabilities-box {
+  background-color: var(--color-bg-alt);
+  border-radius: 1rem;
+  padding: 2rem;
+  border: 1px solid var(--color-border-subtle);
+}
+
+.service-cta-box {
+  background-color: var(--color-primary-navy);
+  border-radius: 1rem;
+  color: #ffffff;
+  padding: 2rem;
+  border: 1px solid var(--color-border-gold);
+}

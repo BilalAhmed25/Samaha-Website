@@ -1,0 +1,23 @@
+/* FAQ Section Styles */
+.faq-wrapper {
+  max-width: var(--site-narrow-width);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: var(--container-padding);
+  padding-right: var(--container-padding);
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+.faq-card {
+  border: 1px solid var(--color-border-subtle);
+  border-radius: 0.75rem;
+  overflow: hidden;
+  background-color: #ffffff;
+  box-shadow: var(--shadow-sm);
+  transition: border-color 0.2s ease;
+}
+
+.faq-card:hover {
+  border-color: var(--color-border-gold);
+}

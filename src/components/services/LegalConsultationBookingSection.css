@@ -1,0 +1,36 @@
+/* Legal Consultation Booking Section Styles */
+.booking-section-wrapper {
+    padding: 5.5rem 0;
+    background-color: #ffffff;
+    border-bottom: 1px solid var(--color-border-subtle);
+}
+
+.booking-form-card {
+    background-color: var(--color-bg-page);
+    border-radius: 1.25rem;
+    border: 1px solid var(--color-border-subtle);
+    padding: 2.5rem;
+    box-shadow: none !important;
+}
+
+.booking-input {
+    width: 100%;
+    padding: 0.85rem 1rem;
+    background-color: #ffffff;
+    border: 1px solid var(--color-border-subtle);
+    border-radius: 0.75rem;
+    color: var(--color-text-main);
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    outline: none;
+    transition: border-color 0.2s ease;
+    box-shadow: none !important;
+}
+
+.booking-input:focus {
+    border-color: var(--color-primary-navy);
+}
+
+.booking-input::placeholder {
+    color: #94a3b8;
+}

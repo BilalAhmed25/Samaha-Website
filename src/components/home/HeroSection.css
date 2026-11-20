@@ -1,0 +1,40 @@
+/* Hero Section Component Styles */
+.hero-wrapper {
+  position: relative;
+  min-height: 88vh;
+  display: flex;
+  align-items: center;
+  background-color: var(--color-navy-dark);
+  overflow: hidden;
+}
+
+.hero-ambient-glow {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse 80% 80% at 50% -20%, rgba(197, 168, 128, 0.18), transparent);
+}
+
+.hero-bg-overlay {
+  position: absolute;
+  inset: 0;
+  background-image: url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=2000&q=80');
+  background-size: cover;
+  background-position: center;
+  opacity: 0.1;
+  mix-blend-mode: luminosity;
+}
+
+.hero-quick-card {
+  position: relative;
+  background: linear-gradient(180deg, var(--color-navy-light) 0%, var(--color-primary-navy) 100%);
+  border: 1px solid var(--color-border-gold);
+  border-radius: 1rem;
+  padding: 1.5rem;
+  box-shadow: var(--shadow-luxury);
+}
+
+@media (min-width: 640px) {
+  .hero-quick-card {
+    padding: 2rem;
+  }
+}

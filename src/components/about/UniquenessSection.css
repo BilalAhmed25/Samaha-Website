@@ -1,0 +1,18 @@
+/* Uniqueness Section Styles */
+.uniqueness-wrapper {
+    background-color: var(--color-bg-alt);
+    border-top: 1px solid var(--color-border-subtle);
+    border-bottom: 1px solid var(--color-border-subtle);
+    padding: 5rem 0;
+}
+
+.uniqueness-card {
+    background-color: #ffffff;
+    padding: 2rem;
+    border-radius: 1rem;
+    border: 1px solid var(--color-border-subtle);
+    box-shadow: var(--shadow-sm);
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}

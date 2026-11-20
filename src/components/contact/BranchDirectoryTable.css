@@ -1,0 +1,7 @@
+/* Branch Directory Table Styles */
+.branch-directory-wrapper {
+  background-color: var(--color-bg-alt);
+  border-radius: 1rem;
+  border: 1px solid var(--color-border-subtle);
+  padding: 2rem;
+}

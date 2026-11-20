@@ -1,0 +1,21 @@
+/* Home Welcome Section Styles */
+.welcome-section-wrapper {
+  padding: 5.5rem 0;
+  background-color: #ffffff;
+}
+
+.welcome-feature-card {
+  display: flex;
+  align-items: center;
+  gap: 0.875rem;
+  padding: 1rem 1.25rem;
+  background-color: var(--color-bg-alt);
+  border-radius: 0.75rem;
+  border: 1px solid var(--color-border-subtle);
+  transition: var(--transition-smooth);
+}
+
+.welcome-feature-card:hover {
+  border-color: var(--color-border-gold);
+  background-color: #fbf9f4;
+}

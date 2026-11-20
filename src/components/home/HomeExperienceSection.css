@@ -1,0 +1,118 @@
+/* Home Experience Section Styles */
+.experience-section-wrapper {
+    background-color: var(--color-navy-dark);
+    color: #ffffff;
+    padding: 6rem 0;
+    position: relative;
+    overflow: hidden;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* Stat Cards */
+.experience-stat-card {
+    background: rgba(255, 255, 255, 0.035);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 1rem;
+    padding: 1.25rem;
+    transition: border-color 0.25s ease;
+}
+
+.experience-stat-card:hover {
+    border-color: var(--color-gold-light);
+}
+
+/* Mobile Phone Frame Mockup */
+.mobile-phone-frame-wrapper {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.mobile-phone-mockup {
+    width: 420px;
+    max-width: 92vw;
+    height: 520px;
+    max-height: 75vh;
+    background-color: #000000;
+    border: 11px solid #1E293B;
+    outline: 1px solid rgba(255, 255, 255, 0.18);
+    border-radius: 44px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: none !important;
+}
+
+@media (min-width: 1280px) {
+    .mobile-phone-mockup {
+        width: 450px;
+        height: 870px;
+    }
+}
+
+@media (max-width: 640px) {
+    .mobile-phone-mockup {
+        width: 100%;
+        max-width: 360px;
+        height: 800px;
+    }
+}
+
+/* Dynamic Island Notch */
+.mobile-notch-island {
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 24px;
+    background-color: #000000;
+    border-radius: 20px;
+    z-index: 20;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    pointer-events: none;
+}
+
+.mobile-camera-lens {
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    background: #111827;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.mobile-speaker {
+    width: 38px;
+    height: 4px;
+    border-radius: 2px;
+    background: #1f2937;
+}
+
+/* Video Player inside phone screen */
+.mobile-screen-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 36px;
+    display: block;
+    background-color: #000000;
+}
+
+/* Bottom Home Indicator Bar */
+.mobile-home-bar {
+    position: absolute;
+    bottom: 8px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 120px;
+    height: 4px;
+    border-radius: 2px;
+    background-color: rgba(255, 255, 255, 0.6);
+    z-index: 20;
+    pointer-events: none;
+}

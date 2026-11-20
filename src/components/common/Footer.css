@@ -1,0 +1,60 @@
+/* Footer Component Styles */
+.footer-wrapper {
+    background-color: var(--color-navy-dark);
+    color: #94a3b8;
+    font-size: 0.875rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.footer-advisory-banner {
+    background-color: var(--color-primary-navy);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    padding: 2.5rem 1rem;
+}
+
+.footer-link {
+    color: #94a3b8;
+    font-size: 0.875rem;
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.footer-link:hover {
+    color: var(--color-gold-light);
+    transform: translateX(2px);
+}
+
+.footer-badge {
+    background-color: #0f172a;
+    color: #cbd5e1;
+    font-size: 0.6875rem;
+    padding: 0.25rem 0.625rem;
+    border-radius: 0.25rem;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    transition: all 0.2s ease;
+}
+
+.footer-badge:hover {
+    color: var(--color-gold-light);
+    border-color: var(--color-border-gold);
+}
+
+.footer-bottom {
+    background-color: #050b13;
+    border-top: 1px solid rgba(255, 255, 255, 0.06);
+    padding: 1.5rem 1rem;
+    font-size: 0.75rem;
+    color: #64748b;
+}
+
+.footer-logo-white {
+    filter: brightness(0) invert(1);
+    transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.footer-logo-white:hover {
+    opacity: 0.9;
+    transform: scale(1.02);
+}

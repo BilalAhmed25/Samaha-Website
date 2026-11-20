@@ -1,0 +1,39 @@
+/* Who Is Samaha Section Styles */
+.who-samaha-wrapper {
+    padding: 5.5rem 0;
+    background-color: #ffffff;
+    border-bottom: 1px solid var(--color-border-subtle);
+}
+
+.who-samaha-card {
+    background-color: var(--color-bg-page);
+    border-radius: 1rem;
+    border: 1px solid var(--color-border-subtle);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: border-color 0.25s ease;
+    box-shadow: none !important;
+}
+
+.who-samaha-card:hover {
+    border-color: var(--color-primary-navy);
+}
+
+.who-samaha-img-wrap {
+    width: 100%;
+    height: 120px;
+    padding: 1.25rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #ffffff;
+    border-bottom: 1px solid var(--color-border-subtle);
+}
+
+.who-samaha-img-wrap img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    display: block;
+}

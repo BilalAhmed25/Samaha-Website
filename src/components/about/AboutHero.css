@@ -1,0 +1,38 @@
+/* About Hero Component Styles */
+.about-hero-wrapper {
+    background-color: var(--color-navy-dark);
+    color: #ffffff;
+    padding: 9.5rem 0 4.5rem 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+    background-image:
+        linear-gradient(to right, rgba(197, 168, 128, 0.08) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(197, 168, 128, 0.08) 1px, transparent 1px),
+        linear-gradient(to right, rgba(255, 255, 255, 0.035) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(255, 255, 255, 0.035) 1px, transparent 1px),
+        radial-gradient(ellipse 70% 50% at 50% 0%, rgba(35, 51, 104, 0.65), transparent 80%),
+        radial-gradient(ellipse 50% 40% at 50% -15%, rgba(197, 168, 128, 0.22), transparent 75%);
+    background-size: 120px 120px, 120px 120px, 24px 24px, 24px 24px, 100% 100%, 100% 100%;
+    background-position: center center;
+}
+
+@media (min-width: 640px) {
+    .about-hero-wrapper {
+        padding: 10.5rem 0 5rem 0;
+    }
+}
+
+@media (min-width: 1024px) {
+    .about-hero-wrapper {
+        padding: 11.5rem 0 6rem 0;
+    }
+}
+
+.about-hero-glow {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background: radial-gradient(ellipse 60% 60% at 50% -10%, rgba(197, 168, 128, 0.12), transparent);
+}
