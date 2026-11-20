@@ -18,12 +18,31 @@
 }
 
 .navbar-main.scrolled {
-    background-color: rgba(18, 27, 56, 0.96);
-    backdrop-filter: blur(16px);
-    -webkit-backdrop-filter: blur(16px);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    background-color: rgba(255, 255, 255, 0.78);
+    backdrop-filter: blur(18px) invert(30%) sepia(90%) saturate(220%) hue-rotate(5deg);
+    -webkit-backdrop-filter: blur(18px) invert(30%) sepia(90%) saturate(220%) hue-rotate(5deg);
+    border-bottom: 1px solid rgba(197, 168, 128, 0.4);
     padding-top: 0.5rem;
     padding-bottom: 0.5rem;
+}
+
+.navbar-main.scrolled .header-logo-white {
+    filter: none;
+}
+
+.navbar-main.scrolled .nav-link {
+    color: #121B38;
+}
+
+.navbar-main.scrolled .nav-link:hover,
+.navbar-main.scrolled .nav-link.active {
+    color: #9E7D4E;
+}
+
+.navbar-main.scrolled .mobile-menu-toggle {
+    color: #121B38;
+    border-color: rgba(18, 27, 56, 0.2);
+    background-color: rgba(18, 27, 56, 0.06);
 }
 
 .nav-link {

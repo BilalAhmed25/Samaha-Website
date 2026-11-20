@@ -208,7 +208,7 @@ export default function Navbar({ onOpenConsultation }) {
                         </div>
                         <button
                             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-                            className="p-2 text-slate-300 hover:text-white rounded-lg border border-slate-700 bg-slate-800/60 cursor-pointer"
+                            className="p-2 text-slate-300 hover:text-white rounded-lg border border-slate-700 bg-slate-800/60 cursor-pointer mobile-menu-toggle"
                             aria-label="Toggle Navigation Menu"
                         >
                             {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
@@ -363,24 +363,8 @@ export default function Navbar({ onOpenConsultation }) {
 
                         {/* 2. Global Branches Mega Menu */}
                         {activeMegaMenu === 'branches' && (
-                            <div className="space-y-6">
-                                <div className="flex items-center justify-between pb-3.5 border-b border-white/10">
-                                    <div className="flex items-center gap-3">
-                                        <span className="text-sm font-bold uppercase tracking-wider text-gold-400">
-                                            Global Presence • 7 Countries
-                                        </span>
-                                    </div>
-                                    <Link
-                                        to="/branches"
-                                        onClick={() => setActiveMegaMenu(null)}
-                                        className="text-sm font-bold text-gold-400 hover:text-white flex items-center gap-1.5 transition-colors"
-                                    >
-                                        <span>Full Branch Directory</span>
-                                        <ArrowRight className="w-4 h-4" />
-                                    </Link>
-                                </div>
-
-                                <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 py-2">
+                            <div className="py-2">
+                                <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
                                     {countries.map((c) => {
                                         const flagMap = {
                                             'united-arab-emirates': '/flags/ae.png',
