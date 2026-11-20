@@ -11,7 +11,6 @@ import AboutPage from './pages/AboutPage';
 import LegalServicesPage from './pages/LegalServicesPage';
 import ServiceDetailPage from './pages/ServiceDetailPage';
 import TeamPage from './pages/TeamPage';
-import BranchesOverviewPage from './pages/BranchesOverviewPage';
 import ContactPage from './pages/ContactPage';
 import InsightsPage from './pages/InsightsPage';
 
@@ -35,18 +34,6 @@ export default function App() {
         'taxes', 'trademark-laws'
     ];
 
-    const countrySlugs = [
-        'united-arab-emirates', 'egypt', 'kingdom-of-saudi-arabia',
-        'hashemite-kingdom-of-jordan-branches', 'qatar-branches', 'oman-branches',
-        'united-kingdom'
-    ];
-
-    const branchSlugs = [
-        'dubai-branch', 'abu-dhabi-branch', 'ras-al-khaimah-branch',
-        'cairo-branch', 'alexandria-branch', 'mansoura-branch',
-        'jeddah-branch', 'amman-branch', 'doha-branch', 'muscat', 'london'
-    ];
-
     return (
         <div className="min-h-screen flex flex-col bg-[#FBFBFC]">
             <Navbar onOpenConsultation={() => handleOpenConsultation()} />
@@ -58,7 +45,6 @@ export default function App() {
                     <Route path="/legal-services" element={<LegalServicesPage onOpenConsultation={handleOpenConsultation} />} />
                     <Route path="/legal-service" element={<LegalServicesPage onOpenConsultation={handleOpenConsultation} />} />
                     <Route path="/team" element={<TeamPage onOpenConsultation={handleOpenConsultation} />} />
-                    <Route path="/branches" element={<BranchesOverviewPage onOpenConsultation={handleOpenConsultation} />} />
                     <Route path="/contact" element={<ContactPage />} />
                     <Route path="/insights" element={<InsightsPage onOpenConsultation={handleOpenConsultation} />} />
 
@@ -68,15 +54,6 @@ export default function App() {
                             key={slug}
                             path={`/${slug}`}
                             element={<ServiceDetailPage onOpenConsultation={handleOpenConsultation} />}
-                        />
-                    ))}
-
-                    {/* Country & Branch Routes map to central BranchesOverviewPage */}
-                    {[...countrySlugs, ...branchSlugs].map(slug => (
-                        <Route
-                            key={slug}
-                            path={`/${slug}`}
-                            element={<BranchesOverviewPage onOpenConsultation={handleOpenConsultation} />}
                         />
                     ))}
 

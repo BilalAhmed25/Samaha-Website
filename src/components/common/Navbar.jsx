@@ -135,18 +135,14 @@ export default function Navbar({ onOpenConsultation }) {
                                 className="relative py-1"
                                 onMouseEnter={() => setActiveMegaMenu('branches')}
                             >
-                                <Link
-                                    to="/branches"
-                                    className={`nav-link flex items-center gap-1 ${activeMegaMenu === 'branches' ||
-                                        location.pathname === '/branches' ||
-                                        countries.some(c => location.pathname === `/${c.id}`)
-                                        ? 'active'
-                                        : ''
-                                        }`}
+                                <button
+                                    type="button"
+                                    onClick={() => setActiveMegaMenu(activeMegaMenu === 'branches' ? null : 'branches')}
+                                    className={`nav-link flex items-center gap-1 cursor-pointer bg-transparent border-0 p-0 text-sm font-medium ${activeMegaMenu === 'branches' ? 'active text-gold-400' : ''}`}
                                 >
                                     <span>Global Branches</span>
                                     <ChevronDown className={`w-4 h-4 transition-transform text-gold-400 ${activeMegaMenu === 'branches' ? 'rotate-180' : ''}`} />
-                                </Link>
+                                </button>
                             </div>
 
                             <Link
@@ -284,10 +280,12 @@ export default function Navbar({ onOpenConsultation }) {
                                         };
                                         const flagSrc = flagMap[c.id] || c.flag;
                                         return (
-                                            <Link
+                                            <div
                                                 key={c.id}
-                                                to={`/branches#${c.id}`}
-                                                onClick={() => setActiveMegaMenu(null)}
+                                                onClick={() => {
+                                                    setActiveMegaMenu(null);
+                                                    onOpenConsultation(c.name);
+                                                }}
                                                 className="flex items-center gap-3.5 p-3.5 rounded-xl bg-white/[0.04] hover:bg-white/[0.08] border border-white/5 hover:border-gold-500/40 transition-all group cursor-pointer"
                                             >
                                                 <img
@@ -298,7 +296,7 @@ export default function Navbar({ onOpenConsultation }) {
                                                 <span className="text-[15px] font-bold text-white group-hover:text-gold-400 transition-colors">
                                                     {c.name}
                                                 </span>
-                                            </Link>
+                                            </div>
                                         );
                                     })}
                                 </div>
@@ -493,14 +491,6 @@ export default function Navbar({ onOpenConsultation }) {
                         </button>
                         {mobileSubmenu.branches && (
                             <div className="pl-3 py-1 space-y-1.5 border-l-2 border-gold-500/30 my-1 ml-1 animate-fadeIn">
-                                <Link
-                                    to="/branches"
-                                    onClick={() => setMobileMenuOpen(false)}
-                                    className="text-xs font-semibold text-gold-400 hover:text-white py-1 flex items-center gap-1.5 transition-colors"
-                                >
-                                    <span>All 11 Offices Directory & Map</span>
-                                    <ArrowRight className="w-3 h-3" />
-                                </Link>
                                 {countries.map((c) => {
                                     const flagMap = {
                                         'united-arab-emirates': '/flags/ae.png',
@@ -513,15 +503,18 @@ export default function Navbar({ onOpenConsultation }) {
                                     };
                                     const flagSrc = flagMap[c.id] || c.flag;
                                     return (
-                                        <Link
+                                        <button
                                             key={c.id}
-                                            to={`/branches#${c.id}`}
-                                            onClick={() => setMobileMenuOpen(false)}
-                                            className="flex items-center gap-2 text-xs text-slate-300 hover:text-gold-400 py-1 transition-colors"
+                                            type="button"
+                                            onClick={() => {
+                                                setMobileMenuOpen(false);
+                                                onOpenConsultation(c.name);
+                                            }}
+                                            className="w-full flex items-center gap-2 text-xs text-slate-300 hover:text-gold-400 py-1 transition-colors text-left cursor-pointer"
                                         >
                                             <img src={flagSrc} alt={c.name} className="w-4 h-3 object-cover rounded-[1px] border border-white/20 shrink-0" />
                                             <span>{c.name}</span>
-                                        </Link>
+                                        </button>
                                     );
                                 })}
                             </div>

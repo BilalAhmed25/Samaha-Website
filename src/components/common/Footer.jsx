@@ -17,10 +17,10 @@ export default function Footer({ onOpenConsultation }) {
                         <span className="text-gold-400 font-semibold tracking-wider text-xs uppercase block mb-1">
                             30 Years of Legal Leadership
                         </span>
-                        <h3 className="text-2xl sm:text-3xl font-serif text-white font-bold">
+                        <h3 className="text-2xl sm:text-3xl font-serif text-white font-bold mb-2.5">
                             Facing a Complex Legal Challenge?
                         </h3>
-                        <p className="text-slate-300 text-sm sm:text-base max-w-xl mt-1 leading-relaxed">
+                        <p className="text-slate-300 text-sm sm:text-base max-w-xl leading-relaxed">
                             Speak directly with our senior attorneys and legal consultants in Dubai, Abu Dhabi, or any of our 11 global branches.
                         </p>
                     </div>
@@ -30,9 +30,9 @@ export default function Footer({ onOpenConsultation }) {
                         </button>
                         <a
                             href={`tel:${firmInfo.headOffice.phone.replace(/\s+/g, '')}`}
-                            className="px-5 py-3 rounded-lg text-base sm:text-lg font-bold text-white border border-slate-700 hover:bg-slate-800/60 transition-colors flex items-center gap-2 cursor-pointer"
+                            className="px-6 py-3 rounded-lg text-base font-semibold text-white border border-slate-700 hover:bg-slate-800/60 transition-colors flex items-center gap-2 cursor-pointer"
                         >
-                            <Phone className="w-5 h-5 text-gold-400" />
+                            <Phone className="w-4.5 h-4.5 text-gold-400" />
                             <span>Call Us Now</span>
                         </a>
                     </div>
@@ -52,7 +52,7 @@ export default function Footer({ onOpenConsultation }) {
                         />
                     </Link>
 
-                    <p className="text-slate-400 leading-relaxed max-w-[330px]">
+                    <p className="text-slate-400 leading-relaxed max-w-[290px]">
                         Samaha Group is a premier international legal conglomerate delivering uncompromising advocacy, corporate structuring, and cross-border litigation services. Accredited before all UAE Federal, Commercial, and International Arbitration courts.
                     </p>
                 </div>
@@ -88,7 +88,11 @@ export default function Footer({ onOpenConsultation }) {
                     <ul className="space-y-2.5">
                         {countries.map(c => (
                             <li key={c.id}>
-                                <Link to={`/branches#${c.id}`} className="footer-link">
+                                <button
+                                    type="button"
+                                    onClick={() => onOpenConsultation && onOpenConsultation(c.name)}
+                                    className="footer-link text-left cursor-pointer"
+                                >
                                     <ChevronRight className="w-3.5 h-3.5 text-gold-400 shrink-0" />
                                     <img
                                         src={c.flag}
@@ -96,7 +100,7 @@ export default function Footer({ onOpenConsultation }) {
                                         className="w-4 h-3 object-cover rounded-[2px] border border-white/20 shrink-0 inline-block"
                                     />
                                     <span>{c.name}</span>
-                                </Link>
+                                </button>
                             </li>
                         ))}
                     </ul>

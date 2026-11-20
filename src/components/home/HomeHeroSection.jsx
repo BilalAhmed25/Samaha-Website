@@ -167,19 +167,20 @@ export default function HomeHeroSection({ onOpenConsultation }) {
                     {/* All Branch Flags Only */}
                     <div className="pt-4 border-t border-white/10 flex items-center gap-3 sm:gap-3.5 flex-wrap">
                         {branchFlags.map((flag) => (
-                            <Link
+                            <button
                                 key={flag.id}
-                                to={`/branches#${flag.id}`}
+                                type="button"
+                                onClick={() => onOpenConsultation(flag.name)}
                                 title={flag.name}
                                 aria-label={flag.name}
-                                className="group inline-flex items-center justify-center transition-transform"
+                                className="group inline-flex items-center justify-center transition-transform cursor-pointer"
                             >
                                 <img
                                     src={flag.src}
                                     alt={flag.name}
                                     className="w-10 h-7 sm:w-12 sm:h-8 object-cover rounded-[3px] border border-white/30 group-hover:border-gold-400 group-hover:scale-110 transition-all cursor-pointer"
                                 />
-                            </Link>
+                            </button>
                         ))}
                     </div>
 

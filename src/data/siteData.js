@@ -501,201 +501,58 @@ export const countries = [
     {
         id: "united-arab-emirates",
         name: "United Arab Emirates",
-        flag: "/flags/ae.svg",
-        code: "UAE",
-        description: "Our global headquarters and principal legal operations, offering full rights of audience before all UAE Federal, Dubai, Abu Dhabi, and DIFC/ADGM courts.",
-        branches: [
-            {
-                slug: "dubai-branch",
-                name: "Dubai Head Office",
-                city: "Dubai",
-                type: "Global Headquarters",
-                address: "Office No: 1404B, Floor 14, API World Tower, Sheikh Zayed Road, World Trade Center Area, Dubai (Next to Conrad Dubai Hotel)",
-                phone: "+971 54 444 7773",
-                altPhone: "+971 4 344 4773",
-                email: "info@samaha-legal.com",
-                hours: "Sun - Thu: 8:30 AM - 6:00 PM",
-                mapsUrl: "https://maps.google.com/?q=API+World+Tower+Dubai"
-            },
-            {
-                slug: "abu-dhabi-branch",
-                name: "Abu Dhabi Office",
-                city: "Abu Dhabi",
-                type: "Regional Office",
-                address: "Elite Business Zone, Block F, 1st Floor, Office No. 29, Musaffah, Abu Dhabi, UAE",
-                phone: "050 272 7035",
-                altPhone: "+971 54 444 7773",
-                email: "info@samaha-legal.com",
-                hours: "Sun - Thu: 9:00 AM - 5:30 PM",
-                mapsUrl: "https://maps.google.com/?q=Elite+Business+Zone+Musaffah+Abu+Dhabi"
-            },
-            {
-                slug: "ras-al-khaimah-branch",
-                name: "Ras Al Khaimah Office",
-                city: "Ras Al Khaimah",
-                type: "Regional Office",
-                address: "Office No: 1607, Floor 16, Julphar Towers (Offices Tower), Ras Al Khaimah, UAE",
-                phone: "+971 54 444 7773",
-                altPhone: "050 272 7035",
-                email: "info@samaha-legal.com",
-                hours: "Sun - Thu: 9:00 AM - 5:30 PM",
-                mapsUrl: "https://maps.google.com/?q=Julphar+Towers+Ras+Al+Khaimah"
-            }
-        ]
+        flag: "/flags/ae.png",
+        code: "UAE"
     },
     {
         id: "egypt",
         name: "Egypt",
-        flag: "/flags/eg.svg",
-        code: "EG",
-        description: "Broad litigation and legal consultancy presence covering Cairo, Alexandria, and the Delta governorates.",
-        branches: [
-            {
-                slug: "cairo-branch",
-                name: "Cairo Branch",
-                city: "Cairo",
-                type: "Capital Headquarters",
-                address: "Downtown Financial District & New Cairo Commercial Zone, Cairo, Egypt",
-                phone: "+20 15 5666 6493",
-                altPhone: "+971 54 444 7773",
-                email: "info@samaha-legal.com",
-                hours: "Sun - Thu: 9:00 AM - 6:00 PM",
-                mapsUrl: "https://maps.google.com/?q=Cairo+Egypt"
-            },
-            {
-                slug: "alexandria-branch",
-                name: "Alexandria Branch",
-                city: "Alexandria",
-                type: "Maritime & Commercial Office",
-                address: "Smouha / Corniche Commercial Hub, Alexandria, Egypt",
-                phone: "+20 15 5666 6493",
-                altPhone: "+971 54 444 7773",
-                email: "info@samaha-legal.com",
-                hours: "Sun - Thu: 9:00 AM - 6:00 PM",
-                mapsUrl: "https://maps.google.com/?q=Alexandria+Egypt"
-            },
-            {
-                slug: "mansoura-branch",
-                name: "Mansoura Branch",
-                city: "Mansoura",
-                type: "Delta Regional Office",
-                address: "El Guish Street, Al-Dahab Tower, 10th Floor, Office No. 1001 (Next to EgyptAir), Mansoura, Dakahlia, Egypt",
-                phone: "+20 15 5666 6493",
-                altPhone: "+971 54 444 7773",
-                email: "info@samaha-legal.com",
-                hours: "Sun - Thu: 9:00 AM - 6:00 PM",
-                mapsUrl: "https://maps.google.com/?q=Al-Dahab+Tower+Mansoura"
-            }
-        ]
+        flag: "/flags/eg.png",
+        code: "EG"
     },
     {
         id: "kingdom-of-saudi-arabia",
         name: "Kingdom of Saudi Arabia",
-        flag: "/flags/sa.svg",
-        code: "KSA",
-        description: "Advising domestic and international enterprises on Vision 2030 corporate initiatives, foreign investment, and commercial litigation.",
-        branches: [
-            {
-                slug: "jeddah-branch",
-                name: "Jeddah Branch",
-                city: "Jeddah",
-                type: "Regional Office",
-                address: "King Abdulaziz Road, Al-Shati Commercial Center, Jeddah, Saudi Arabia",
-                phone: "050 272 7035",
-                altPhone: "+971 54 444 7773",
-                email: "info@samaha-legal.com",
-                hours: "Sun - Thu: 9:00 AM - 5:30 PM",
-                mapsUrl: "https://maps.google.com/?q=Jeddah+Saudi+Arabia"
-            }
-        ]
+        flag: "/flags/sa.png",
+        code: "KSA"
     },
     {
         id: "hashemite-kingdom-of-jordan-branches",
         name: "Hashemite Kingdom of Jordan",
-        flag: "/flags/jo.svg",
-        code: "JOR",
-        description: "Regional office serving corporate clients across the Levant in commercial contracts, banking, and international arbitration.",
-        branches: [
-            {
-                slug: "amman-branch",
-                name: "Amman Branch",
-                city: "Amman",
-                type: "Levant Regional Office",
-                address: "Zahran Street, 7th Circle Commercial District, Amman, Jordan",
-                phone: "050 272 7035",
-                altPhone: "+971 54 444 7773",
-                email: "info@samaha-legal.com",
-                hours: "Sun - Thu: 9:00 AM - 5:30 PM",
-                mapsUrl: "https://maps.google.com/?q=Amman+Jordan"
-            }
-        ]
+        flag: "/flags/jo.png",
+        code: "JOR"
     },
     {
         id: "qatar-branches",
         name: "Qatar",
-        flag: "/flags/qa.svg",
-        code: "QAT",
-        description: "Comprehensive advisory on Qatari commercial law, energy contracts, construction disputes, and corporate establishment.",
-        branches: [
-            {
-                slug: "doha-branch",
-                name: "Doha Branch",
-                city: "Doha",
-                type: "Regional Office",
-                address: "Palm Tower B, West Bay, Floor 28, Office No. 3, Doha, Qatar",
-                phone: "050 272 7035",
-                altPhone: "+971 54 444 7773",
-                email: "info@samaha-legal.com",
-                hours: "Sun - Thu: 8:30 AM - 5:00 PM",
-                mapsUrl: "https://maps.google.com/?q=Palm+Tower+West+Bay+Doha"
-            }
-        ]
+        flag: "/flags/qa.png",
+        code: "QAT"
     },
     {
         id: "oman-branches",
         name: "Sultanate of Oman",
-        flag: "/flags/om.svg",
-        code: "OMN",
-        description: "Advising on maritime logistics, commercial company laws, and infrastructure development in Oman.",
-        branches: [
-            {
-                slug: "muscat",
-                name: "Muscat Branch",
-                city: "Muscat",
-                type: "Regional Office",
-                address: "Al Khuwair Commercial District, Muscat, Sultanate of Oman",
-                phone: "050 272 7035",
-                altPhone: "+971 54 444 7773",
-                email: "info@samaha-legal.com",
-                hours: "Sun - Thu: 8:30 AM - 5:00 PM",
-                mapsUrl: "https://maps.google.com/?q=Muscat+Oman"
-            }
-        ]
+        flag: "/flags/om.png",
+        code: "OMN"
     },
     {
         id: "united-kingdom",
         name: "United Kingdom",
-        flag: "/flags/gb.svg",
-        code: "UK",
-        description: "European liaison office catering to cross-border London transactions, English law compliance, and international dispute resolution.",
-        branches: [
-            {
-                slug: "london",
-                name: "London Office",
-                city: "London",
-                type: "European Liaison Office",
-                address: "71-75 Shelton Street, Covent Garden, London, England, WC2H 9JQ",
-                phone: "+34 672 82 46 63",
-                altPhone: "+971 54 444 7773",
-                email: "info@samaha-legal.com",
-                hours: "Mon - Fri: 9:00 AM - 5:30 PM (GMT)",
-                mapsUrl: "https://maps.google.com/?q=71-75+Shelton+Street+London+WC2H+9JQ"
-            }
-        ]
+        flag: "/flags/gb.png",
+        code: "UK"
     }
 ];
 
-export const allBranches = countries.flatMap(c => c.branches.map(b => ({ ...b, country: c.name, countryId: c.id, flag: c.flag })));
+export const allBranches = [
+    { name: "Dubai Head Office", country: "United Arab Emirates", city: "Dubai" },
+    { name: "Abu Dhabi Office", country: "United Arab Emirates", city: "Abu Dhabi" },
+    { name: "Ras Al Khaimah Office", country: "United Arab Emirates", city: "Ras Al Khaimah" },
+    { name: "Egypt Office", country: "Egypt", city: "Cairo / Mansoura" },
+    { name: "Saudi Arabia Office", country: "Kingdom of Saudi Arabia", city: "Jeddah" },
+    { name: "Jordan Office", country: "Hashemite Kingdom of Jordan", city: "Amman" },
+    { name: "Qatar Office", country: "Qatar", city: "Doha" },
+    { name: "Oman Office", country: "Sultanate of Oman", city: "Muscat" },
+    { name: "United Kingdom Liaison", country: "United Kingdom", city: "London" }
+];
 
 export const testimonials = [
     {
