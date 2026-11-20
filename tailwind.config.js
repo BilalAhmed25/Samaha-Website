@@ -51,9 +51,9 @@ export default {
                 },
             },
             fontFamily: {
-                serif: ['"Playfair Display"', 'Georgia', 'serif'],
-                sans: ['"Plus Jakarta Sans"', 'Inter', 'system-ui', 'sans-serif'],
-                chopin: ['"Chopin"', '"Chopin Script"', 'system-ui', '-apple-system', 'sans-serif'],
+                serif: ['"Lora"', '"Playfair Display"', 'Georgia', 'serif'],
+                sans: ['"Poppins"', 'system-ui', '-apple-system', 'sans-serif'],
+                poppins: ['"Poppins"', 'system-ui', '-apple-system', 'sans-serif'],
             },
             // Completely remove shadow everywhere per user request
             boxShadow: {
