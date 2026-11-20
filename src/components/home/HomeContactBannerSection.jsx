@@ -15,7 +15,7 @@ export default function HomeContactBannerSection({ onOpenConsultation }) {
                             <span className="text-sm font-bold uppercase tracking-widest text-gold-400 block">
                                 Immediate Legal Counsel
                             </span>
-                            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-serif font-extrabold text-white leading-tight">
+                            <h2 className="text-2xl sm:text-3xl lg:text-3xl xl:text-4xl font-serif font-bold text-white leading-tight sm:whitespace-nowrap">
                                 Speak With Our Expert Lawyers Today!
                             </h2>
                             <p className="text-slate-300 text-sm sm:text-base max-w-xl leading-relaxed">

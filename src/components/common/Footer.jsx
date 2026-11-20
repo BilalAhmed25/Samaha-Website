@@ -52,7 +52,7 @@ export default function Footer({ onOpenConsultation }) {
                         />
                     </Link>
 
-                    <p className="text-slate-400 text-xs leading-relaxed max-w-[270px]">
+                    <p className="text-slate-400 leading-relaxed max-w-[270px]">
                         Samaha Group is a premier international legal conglomerate delivering uncompromising advocacy, corporate structuring, and cross-border litigation services. Accredited before all UAE Federal, Commercial, and International Arbitration courts.
                     </p>
                 </div>
