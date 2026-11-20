@@ -109,6 +109,13 @@ h6,
     font-family: var(--font-serif);
 }
 
+input,
+textarea,
+select,
+button {
+    font-family: var(--font-poppins);
+}
+
 /* Central Layout Container - Expands smoothly up to 1540px */
 .site-container {
     width: 100%;

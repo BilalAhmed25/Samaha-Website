@@ -1,4 +1,11 @@
 /* Floating Input Component Styles */
+.floating-input-wrapper,
+.floating-input-control,
+.floating-input-label,
+.floating-select-control {
+    font-family: var(--font-poppins) !important;
+}
+
 .floating-input-wrapper {
     position: relative;
     width: 100%;
