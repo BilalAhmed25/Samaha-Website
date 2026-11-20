@@ -41,8 +41,8 @@
     --color-emerald: #10B981;
     --color-emerald-dark: #064E3B;
 
-    /* Typography - Poppins Everywhere */
-    --font-serif: 'Poppins', system-ui, -apple-system, sans-serif;
+    /* Typography */
+    --font-serif: 'Lora', 'Playfair Display', Georgia, serif;
     --font-sans: 'Poppins', system-ui, -apple-system, sans-serif;
     --font-poppins: 'Poppins', system-ui, -apple-system, sans-serif;
 
@@ -93,10 +93,11 @@ body {
     line-height: 1.65;
 }
 
-p, span, div, a, li {
+p, span, div, a, li, label, small {
     font-family: var(--font-poppins);
 }
 
+/* Titles and Headings: Lora Serif */
 h1,
 h2,
 h3,
@@ -104,9 +105,10 @@ h4,
 h5,
 h6,
 .serif-heading {
-    font-family: var(--font-poppins) !important;
+    font-family: var(--font-serif) !important;
 }
 
+/* Form controls, inputs, buttons: Poppins */
 input,
 textarea,
 select,

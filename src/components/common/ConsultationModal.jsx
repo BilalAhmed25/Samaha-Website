@@ -74,7 +74,7 @@ export default function ConsultationModal({ isOpen, onClose, preselectedService 
                                 <span className="inline-block px-2.5 py-1 rounded bg-gold-500/20 border border-gold-500/40 text-[11px] font-semibold tracking-wider text-gold-300 uppercase">
                                     30+ Years of Excellence
                                 </span>
-                                <h4 className="text-xl font-bold text-white leading-snug">
+                                <h4 className="text-xl font-serif font-bold text-white leading-snug">
                                     Expert Legal Counsel Across 11 Global Offices
                                 </h4>
                                 <p className="text-xs text-slate-300 leading-relaxed">
@@ -86,7 +86,7 @@ export default function ConsultationModal({ isOpen, onClose, preselectedService 
                         {/* Right Side: Form Column */}
                         <div className="col-span-1 md:col-span-7 p-6 sm:p-8 overflow-y-auto max-h-[92vh]">
                             <div className="mb-5 pr-8">
-                                <h3 className="text-2xl sm:text-3xl font-bold text-white">
+                                <h3 className="text-2xl sm:text-3xl font-serif font-bold text-white">
                                     Book a Legal Consultation
                                 </h3>
                                 <p className="text-slate-300 text-xs sm:text-sm mt-1 leading-relaxed">
@@ -203,7 +203,7 @@ export default function ConsultationModal({ isOpen, onClose, preselectedService 
                         <div className="w-16 h-16 rounded-full bg-emerald-500/20 text-emerald-400 flex items-center justify-center mx-auto">
                             <CheckCircle className="w-10 h-10" />
                         </div>
-                        <h3 className="text-2xl font-bold text-white">Consultation Request Received</h3>
+                        <h3 className="text-2xl font-serif font-bold text-white">Consultation Request Received</h3>
                         <p className="text-slate-300 text-sm max-w-md mx-auto leading-relaxed">
                             Thank you, <span className="text-gold-400 font-semibold">{formData.fullName}</span>. A legal coordinator will contact you shortly.
                         </p>
