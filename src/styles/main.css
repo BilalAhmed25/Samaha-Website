@@ -1,4 +1,17 @@
 /* Main CSS: Global Theme, Palette, Widths, Typography & Variables */
+@font-face {
+    font-family: 'Chopin';
+    src: local('Chopin'),
+         local('Chopin Script'),
+         url('/fonts/Chopin.woff2') format('woff2'),
+         url('/fonts/Chopin.woff') format('woff'),
+         url('/fonts/Chopin.ttf') format('truetype'),
+         url('/fonts/Chopin.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
 :root {
     /* Color Palette - Exactly from Logo */
     --color-primary-navy: #233368;
@@ -44,7 +57,7 @@
     /* Typography */
     --font-serif: 'Playfair Display', Georgia, serif;
     --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
-    --font-mont: 'Mont', 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    --font-chopin: 'Chopin', 'Chopin Script', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
 
     /* Expanded Layout & Widths (Widescreen Luxury Standard) */
     --site-max-width: 1540px;
@@ -93,7 +106,7 @@ body {
 }
 
 p {
-    font-family: var(--font-mont);
+    font-family: var(--font-chopin);
     font-size: 1rem;
     line-height: 1.65;
 }

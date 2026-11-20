@@ -53,7 +53,7 @@ export default {
             fontFamily: {
                 serif: ['"Playfair Display"', 'Georgia', 'serif'],
                 sans: ['"Plus Jakarta Sans"', 'Inter', 'system-ui', 'sans-serif'],
-                mont: ['"Mont"', '"Montserrat"', 'system-ui', '-apple-system', 'sans-serif'],
+                chopin: ['"Chopin"', '"Chopin Script"', 'system-ui', '-apple-system', 'sans-serif'],
             },
             // Completely remove shadow everywhere per user request
             boxShadow: {
