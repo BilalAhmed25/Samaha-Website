@@ -223,26 +223,7 @@ export default function Navbar({ onOpenConsultation }) {
                     <div className="site-container py-7">
                         {/* 1. Legal Services Mega Menu */}
                         {activeMegaMenu === 'services' && (
-                            <div className="space-y-6">
-                                <div className="flex items-center justify-between pb-3.5 border-b border-white/10">
-                                    <div className="flex items-center gap-3">
-                                        <span className="text-sm font-bold uppercase tracking-wider text-gold-400">
-                                            Practice Areas & Legal Disciplines
-                                        </span>
-                                        <span className="text-sm text-slate-300">
-                                            12 Specialized Sectors with Licensed Advocates & Legal Consultants
-                                        </span>
-                                    </div>
-                                    <Link
-                                        to="/legal-services"
-                                        onClick={() => setActiveMegaMenu(null)}
-                                        className="text-sm font-bold text-gold-400 hover:text-white flex items-center gap-1.5 transition-colors"
-                                    >
-                                        <span>View All 12 Practice Areas</span>
-                                        <ArrowRight className="w-4 h-4" />
-                                    </Link>
-                                </div>
-
+                            <div className="py-2">
                                 <div className="grid grid-cols-12 gap-6">
                                     {/* Column 1: Litigation & Defense */}
                                     <div className="col-span-3 space-y-3">
