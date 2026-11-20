@@ -106,7 +106,7 @@ export default function HomeHeroSection({ onOpenConsultation }) {
             <div className="hero-slider-overlay-gradient"></div>
 
             {/* Main Content Container (Padded for transparent fixed header) */}
-            <div className="site-container relative z-10 pt-28 pb-16 sm:pt-32 sm:pb-20 lg:pt-36 lg:pb-24 min-h-[620px] lg:min-h-[680px] flex items-center">
+            <div className="site-container relative z-10 pt-36 pb-16 sm:pt-44 sm:pb-20 lg:pt-48 lg:pb-24 min-h-[660px] lg:min-h-[720px] flex items-center">
                 {/* Left Side: Exact 50% width on desktop for slider content */}
                 <div className="w-full lg:w-1/2 lg:pr-8 xl:pr-12 text-left space-y-6">
 
