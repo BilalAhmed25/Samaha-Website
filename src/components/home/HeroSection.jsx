@@ -82,7 +82,7 @@ export default function HeroSection({ onOpenConsultation }) {
                                     <div>
                                         <div className="text-xs text-slate-400 font-medium">Dubai Headquarters Direct</div>
                                         <a href={`tel:${firmInfo.headOffice.phone.replace(/\s+/g, '')}`} className="text-lg sm:text-xl font-bold text-white hover:text-gold-300 transition-colors">
-                                            Call Now
+                                            Call Us Now
                                         </a>
                                     </div>
                                 </div>

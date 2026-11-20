@@ -28,7 +28,7 @@ export default function CtaBannerSection({ onOpenConsultation }) {
 								className="w-full sm:w-auto px-6 py-3.5 rounded-xl text-base sm:text-lg font-bold text-white border border-slate-700 hover:bg-slate-800/80 transition-colors flex items-center justify-center gap-2 cursor-pointer"
 							>
 								<Phone className="w-5 h-5 text-gold-400" />
-								<span>Call Now</span>
+								<span>Call Us Now</span>
 							</a>
 						</div>
 					</div>

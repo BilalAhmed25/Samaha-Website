@@ -21,7 +21,7 @@ export default function ServiceSidebar({ currentServiceId, onOpenConsultation })
                 <div className="space-y-3 pt-2">
                     <a href={`tel:${firmInfo.headOffice.phone.replace(/\s+/g, '')}`} className="flex items-center gap-2 text-white hover:text-gold-300 text-base font-bold">
                         <Phone className="w-5 h-5 text-gold-400" />
-                        <span>{firmInfo.headOffice.phone}</span>
+                        <span>Call Us Now</span>
                     </a>
                     <div className="flex items-center gap-2 text-slate-300 text-xs">
                         <Clock className="w-4 h-4 text-gold-400" />

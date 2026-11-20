@@ -26,11 +26,11 @@ export default function FloatingWidgets() {
             <a
                 href={`tel:${firmInfo.headOffice.phone.replace(/\s+/g, '')}`}
                 className="floating-btn-phone cursor-pointer"
-                title="Call Dubai Headquarters"
+                title="Call Us Now"
             >
                 <div className="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-pulse"></div>
                 <Phone className="w-4 h-4 text-gold-400" />
-                <span className="text-sm font-bold hidden sm:inline">Call Now</span>
+                <span className="text-sm font-bold hidden sm:inline">Call Us Now</span>
             </a>
 
             <a

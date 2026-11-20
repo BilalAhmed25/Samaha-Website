@@ -578,7 +578,7 @@ export default function Navbar({ onOpenConsultation }) {
                         className="w-full py-2.5 rounded-lg text-xs font-semibold text-slate-200 bg-slate-800/80 border border-slate-700 flex items-center justify-center gap-2"
                     >
                         <Phone className="w-3.5 h-3.5 text-gold-400" />
-                        <span>Call Now</span>
+                        <span>Call Us Now</span>
                     </a>
                 </div>
             </aside>

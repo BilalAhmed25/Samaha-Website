@@ -33,7 +33,7 @@ export default function Footer({ onOpenConsultation }) {
                             className="px-5 py-3 rounded-lg text-base sm:text-lg font-bold text-white border border-slate-700 hover:bg-slate-800/60 transition-colors flex items-center gap-2 cursor-pointer"
                         >
                             <Phone className="w-5 h-5 text-gold-400" />
-                            <span>Call Now</span>
+                            <span>Call Us Now</span>
                         </a>
                     </div>
                 </div>
@@ -52,7 +52,7 @@ export default function Footer({ onOpenConsultation }) {
                         />
                     </Link>
 
-                    <p className="text-slate-400 leading-relaxed max-w-[270px]">
+                    <p className="text-slate-400 leading-relaxed max-w-[330px]">
                         Samaha Group is a premier international legal conglomerate delivering uncompromising advocacy, corporate structuring, and cross-border litigation services. Accredited before all UAE Federal, Commercial, and International Arbitration courts.
                     </p>
                 </div>

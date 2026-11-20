@@ -43,7 +43,7 @@ export default function HomeContactBannerSection({ onOpenConsultation }) {
                                     className="px-6 py-3.5 rounded-lg text-base sm:text-lg font-bold text-gold-400 hover:text-white border border-gold-400/40 hover:border-gold-400 transition-colors inline-flex items-center gap-2.5 cursor-pointer"
                                 >
                                     <Phone className="w-5 h-5" />
-                                    <span>Call Now</span>
+                                    <span>Call Us Now</span>
                                 </a>
                             </div>
                         </div>
